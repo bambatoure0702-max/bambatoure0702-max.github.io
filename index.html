@@ -1,102 +1,557 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bamba TOURE — CV</title>
+  <meta name="description" content="CV de Bamba TOURE — Ingénieur en mécatronique, électronique et automatisme" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --card2:#0c1628;
+      --text:#e8edf6;
+      --muted:#b6c2d9;
+      --soft:#90a3c7;
+      --line:rgba(255,255,255,.10);
+      --accent:#2f7df6; /* blue theme */
+      --accent2:#68d1ff;
+      --chip:rgba(47,125,246,.14);
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
+      --radius: 22px;
+      --radius2: 16px;
+      --max: 1040px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
 
-    <title>Bamba Toure</title>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(47,125,246,.35), transparent 60%),
+        radial-gradient(900px 500px at 85% 0%, rgba(104,209,255,.18), transparent 60%),
+        radial-gradient(1200px 800px at 40% 110%, rgba(47,125,246,.14), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
 
-    <meta name="author" content="Bamba Toure">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--accent2)}
+    .wrap{max-width:var(--max); margin:38px auto; padding:0 18px 70px}
+    .grid{
+      display:grid;
+      grid-template-columns: 360px 1fr;
+      gap:18px;
+      align-items:start;
+    }
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Bamba Toure
-                </p>
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card-inner{padding:20px 20px 18px}
+    .card + .card{margin-top:18px}
 
-                <p>
-                  <!-- Remplace ce paragraphe par ta bio -->
-                  I am a [your role] interested in [your interests]. I work on [your topics].
-                </p>
+    /* Header card */
+    .hero{
+      position:relative;
+      padding:22px 20px 18px;
+      background:
+        radial-gradient(900px 380px at 20% 0%, rgba(47,125,246,.35), transparent 60%),
+        radial-gradient(600px 300px at 90% 0%, rgba(104,209,255,.18), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.00));
+      border-bottom:1px solid var(--line);
+    }
+    .name{
+      display:flex;
+      align-items:flex-end;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .name h1{
+      margin:0;
+      font-size:32px;
+      letter-spacing:.3px;
+      line-height:1.1;
+    }
+    .name .last{
+      font-weight:800;
+      color:var(--accent2);
+      letter-spacing:1px;
+    }
+    .role{
+      margin:10px 0 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .accent-bar{
+      height:3px;
+      width:72px;
+      border-radius:99px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      margin-top:14px;
+    }
 
-                <p style="text-align:center">
-                  <!-- Mets tes vrais liens ici -->
-                  <a href="mailto:tonmail@email.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/CV.pdf">CV</a> &nbsp;/&nbsp;
-                 
-                  <a href="https://www.linkedin.com/">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/">Github</a>
-                </p>
-              </td>
+    .contact{
+      display:grid;
+      gap:10px;
+      padding:18px 20px 18px;
+    }
+    .row{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .row strong{color:var(--text); font-weight:600}
+    .icon{
+      width:18px; height:18px;
+      flex:0 0 18px;
+      margin-top:1px;
+      opacity:.9;
+      color:var(--accent2);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 12.8px;
+    }
+    .btns{display:flex; flex-wrap:wrap; gap:10px; padding:0 20px 20px}
+    .btn{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-size:13px;
+      color:var(--text);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.06); border-color:rgba(104,209,255,.35)}
+    .btn .icon{margin-top:0}
 
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <!-- Mets ta photo ici -->
-                <a href="images/profile.jpg">
-                  <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;"
-                       alt="profile photo"
-                       src="images/profile.jpg"
-                       class="hoverZoomLink">
-                </a>
-              </td>
-            </tr>
-          </tbody></table>
+    /* Main sections */
+    .section{
+      padding:18px 20px 0;
+    }
+    .section:last-child{padding-bottom:18px}
+    .section h2{
+      margin:0 0 12px;
+      font-size:15px;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+      color:var(--soft);
+    }
+    .divider{height:1px; background:var(--line); margin:14px 0 0}
+    .summary{
+      margin:0;
+      color:var(--text);
+      font-size:14.5px;
+    }
+    .summary p{margin:0 0 10px}
+    .summary p:last-child{margin:0}
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  <!-- Mets une description courte de ce que tu fais -->
-                  My interests include [topic1], [topic2], and [topic3].
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+    .item{
+      padding:14px 0;
+      border-top:1px solid var(--line);
+    }
+    .item:first-of-type{border-top:0; padding-top:0}
+    .item-head{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .item-title{
+      font-weight:700;
+      margin:0;
+      font-size:15px;
+      color:var(--text);
+    }
+    .item-sub{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:13.5px;
+    }
+    .when{
+      font-family:var(--mono);
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      padding:6px 8px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    ul.bullets{
+      margin:10px 0 0 0;
+      padding:0 0 0 18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    ul.bullets li{margin:6px 0}
+    ul.bullets li strong{color:var(--text); font-weight:650}
 
-          <!-- IMPORTANT :
-               Supprime tout le gros bloc qui suit dans ton fichier original:
-               le <table ...><tbody> rempli de <tr onmouseout=...> avec les papers de Jon Barron.
-               Et remplace par ta section à toi (ex: Publications/Projects). -->
+    /* Skills */
+    .skill{
+      padding:12px 0;
+      border-top:1px solid var(--line);
+    }
+    .skill:first-of-type{border-top:0; padding-top:0}
+    .skill .k{
+      font-weight:700; color:var(--text); font-size:14.5px;
+    }
+    .skill .v{
+      margin-top:6px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--chip);
+      border:1px solid rgba(47,125,246,.22);
+      color:var(--text);
+      font-size:12.5px;
+    }
+    .chip.muted{
+      background: rgba(255,255,255,.03);
+      border-color: var(--line);
+      color: var(--muted);
+    }
 
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <!-- EXEMPLE d’entrée publication (à dupliquer) -->
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <img src="images/project_thumb.jpg" style="width:100%">
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://tonlien.com">
-                  <span class="papertitle">Project / Paper Title</span>
-                </a>
-                <br>
-                <strong>Bamba Toure</strong>, Coauthor A, Coauthor B
-                <br>
-                <em>Venue</em>, 2025
-                <br>
-                       <tr>
-            <td style="padding:20px;width:25%;vertical-align:top"><strong>BNP Paribas</strong><br><span style="color:gray;font-size:0.9em">2021</span></td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <strong>Quantitative Research Intern</strong>
-              <p>Developed mathematical models to quantify the bank's exposure to Central Counterparty Clearing Houses (CCPs). Modeled default fund contributions using Monte Carlo simulations.</p>
-            </td>
-          </tr>
-                <a href="https://tonlien.com">project</a> / <a href="https://arxiv.org/">paper</a>
-                <p></p>
-                <p>One-line description of what it is.</p>
-              </td>
-            </tr>
-          </tbody></table>
+    /* Responsive */
+    @media (max-width: 960px){
+      .grid{grid-template-columns:1fr}
+    }
 
-        </td>
-      </tr>
-    </tbody></table>
-  </body>
+    /* Print */
+    @media print{
+      :root{ --bg:#fff; --text:#111827; --muted:#374151; --soft:#111827; --line:#e5e7eb; --card:#fff; --card2:#fff; --shadow:none; --chip: #eff6ff; --accent:#2563eb; --accent2:#2563eb; }
+      body{background:#fff}
+      .wrap{margin:0; padding:0}
+      .card{box-shadow:none}
+      a{text-decoration:none}
+      .btns{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- LEFT COLUMN -->
+      <aside>
+        <div class="card">
+          <div class="hero">
+            <div class="name">
+              <h1>Bamba <span class="last">TOURE</span></h1>
+            </div>
+            <div class="role">Ingénieur en mécatronique, électronique et automatisme</div>
+            <div class="accent-bar"></div>
+          </div>
+
+          <div class="contact">
+            <div class="row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.6 7-11a7 7 0 1 0-14 0c0 6.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <div><strong>Paris/France</strong></div>
+            </div>
+
+            <div class="row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="m22 7-9.1 6.1a2 2 0 0 1-2.2 0L2 7" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <div>
+                <strong><a href="mailto:bambatoure0702@gmail.com">bambatoure0702@gmail.com</a></strong>
+              </div>
+            </div>
+
+            <div class="row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.45 2.1L9 10.55a16 16 0 0 0 4.45 4.45l1.15-1.15a2 2 0 0 1 2.1-.45c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <div><strong><a href="tel:+33610259457">+33 6 10 25 94 57</a></strong></div>
+            </div>
+
+            <div class="pill" title="Position recherchée / titre">
+              <span style="display:inline-block;width:8px;height:8px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2))"></span>
+              Ingénieur Mécatronique — Systèmes industriels & Contrôle-Commande
+            </div>
+          </div>
+
+          <div class="btns">
+            <a class="btn" href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2a4 4 0 0 1 2-3Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 9h4v12H2V9Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M4 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              LinkedIn
+            </a>
+
+            <a class="btn" href="https://bambatoure0702-max.github.io/" target="_blank" rel="noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 20h9" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4L16.5 3.5Z" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              Portfolio / GitHub Pages
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Compétences</h2>
+
+            <div class="skill">
+              <div class="k">Automatisme & Contrôle-Commande</div>
+              <div class="v">
+                <span class="chip">CEI 61131-3 (Ladder, FBD, ST)</span>
+                <span class="chip">PID</span>
+                <span class="chip">MPC</span>
+                <span class="chip">Automatique discrète</span>
+                <span class="chip">Matlab/Simulink</span>
+                <span class="chip">LabVIEW</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">Mécatronique & Modélisation</div>
+              <div class="v">
+                <span class="chip">Modélisation multiphysique</span>
+                <span class="chip">Analyse fonctionnelle</span>
+                <span class="chip">Fiabilité des systèmes</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">Électronique & Systèmes embarqués</div>
+              <div class="v">
+                <span class="chip">Arduino</span>
+                <span class="chip">Électronique analogique/numérique</span>
+                <span class="chip">Instrumentation</span>
+                <span class="chip">Électronique de puissance</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">CAO / Conception mécanique</div>
+              <div class="v">
+                <span class="chip">Catia V5</span>
+                <span class="chip">SolidWorks</span>
+                <span class="chip">Prototypage</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">Programmation</div>
+              <div class="v">
+                <span class="chip">Python</span>
+                <span class="chip">C/C++</span>
+                <span class="chip">VHDL</span>
+                <span class="chip">VBA</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">Outils & Méthodes</div>
+              <div class="v">
+                <span class="chip">DOORS</span>
+                <span class="chip">Méthode Agile</span>
+                <span class="chip">Cycle en V</span>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="k">Langues</div>
+              <div class="v">
+                <span class="chip">Français (natif)</span>
+                <span class="chip">Anglais (courant — 880 TOEIC)</span>
+                <span class="chip muted">Espagnol (débutant)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Habilitations</h2>
+            <ul class="bullets" style="margin-top:0">
+              <li><strong>Certificat d’aptitude physique TES</strong> — autorise l’exercice des tâches essentielles de sécurité ferroviaire (hors conduite) jusqu’en 2030.</li>
+              <li><strong>Certificat d’aptitude psychologique TES</strong> — confirme l’aptitude psychologique à exercer les tâches essentielles de sécurité ferroviaire.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Loisirs</h2>
+            <p class="summary" style="margin:0">
+              <strong>Sports :</strong> Football, Basketball, Natation, Ski<br/>
+              <strong>Centres d’intérêt :</strong> Voyages, Lecture
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main>
+        <div class="card">
+          <div class="card-inner section">
+            <h2>À propos</h2>
+            <div class="summary">
+              <p><strong>Ingénieur en mécatronique</strong> spécialisé en <strong>automatisme</strong>, <strong>contrôle-commande</strong> et <strong>gestion de projet technique</strong>, avec une expérience en environnements industriels complexes. J’ai travaillé sur des projets en <strong>TCMS ferroviaire</strong>, régulation thermique et instrumentation, depuis l’analyse fonctionnelle jusqu’à la validation terrain.</p>
+              <p>Je maîtrise la programmation <strong>CEI 61131-3</strong>, <strong>Matlab/Simulink</strong>, <strong>Python</strong>, ainsi que l’intégration de capteurs/actionneurs dans des systèmes multiphysiques.</p>
+              <p>Rigoureux, adaptable et orienté solutions, je prends en charge des sujets techniques nécessitant coordination, organisation et suivi projet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Formation</h2>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">INSA Hauts-de-France</div>
+                  <div class="item-sub">Diplôme d’ingénieur en mécatronique, électronique et automatisme</div>
+                </div>
+                <div class="when">2021—2024</div>
+              </div>
+              <ul class="bullets">
+                <li><strong>Mécanique</strong> : CAO, Conception de mécanismes, Mécanique des systèmes, Thermodynamique, Transfert thermique, Mécanique des fluides, Élasticité, Résistance des matériaux</li>
+                <li><strong>Automatique</strong> : Automatique échantillonnée, continue, discrète, Traitement du signal, Systèmes continus et linéaires, Synthèse logique</li>
+                <li><strong>Électronique</strong> : Microcontrôleurs, Électronique numérique, Instrumentation, Électrotechnique, Électronique de puissance</li>
+                <li><strong>Mécatronique</strong> : Fiabilité, Modélisation des systèmes, Conception de servomécanismes, Approche multiphysique</li>
+                <li><strong>Maths–Info</strong> : Analyse appliquée, Analyse numérique</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">Lycée Parc des Loges, Évry, France</div>
+                  <div class="item-sub">Classes préparatoires aux grandes écoles (Physique - Science de l'ingénieur)</div>
+                </div>
+                <div class="when">2019—2021</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Expérience professionnelle</h2>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">DCM ATN — Nanterre</div>
+                  <div class="item-sub">Stagiaire ingénieur en automatisme – Responsable projet régulation thermique</div>
+                </div>
+                <div class="when">Mars—Sept. 2024</div>
+              </div>
+              <div class="item-sub" style="margin-top:10px">
+                <span class="chip muted">Matlab/Simulink</span>
+                <span class="chip muted">PID</span>
+                <span class="chip muted">MPC</span>
+                <span class="chip muted">Instrumentation thermique</span>
+                <span class="chip muted">Lignes de séchage industrielle</span>
+              </div>
+              <ul class="bullets">
+                <li>Analyse du comportement thermique des séchoirs et identification des <strong>perturbations</strong> et leviers d’amélioration.</li>
+                <li><strong>Modélisation thermique</strong> complète du système et simulation avancée sous Matlab/Simulink.</li>
+                <li>Conception, réglage et validation de <strong>correcteurs PID et MPC</strong> pour stabiliser le procédé.</li>
+                <li>Tests pratiques sur installation réelle en collaboration avec les techniciens.</li>
+                <li><strong>Rédaction de rapports techniques</strong>, résultats de simulation, protocoles de test et dossiers CIR.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">Fives FCB — Lille</div>
+                  <div class="item-sub">Stagiaire ingénieur en instrumentation – Responsable projet instrumentation machine</div>
+                </div>
+                <div class="when">Sept. 2022—Fév. 2023</div>
+              </div>
+              <div class="item-sub" style="margin-top:10px">
+                <span class="chip muted">Capteurs industriels</span>
+                <span class="chip muted">Python</span>
+                <span class="chip muted">Instrumentation fours rotatifs</span>
+                <span class="chip muted">Architecture industrielle</span>
+              </div>
+              <ul class="bullets">
+                <li>Définition des besoins en <strong>instrumentation</strong> pour la surveillance des fours rotatifs.</li>
+                <li>Installation et configuration de capteurs : <strong>inductifs</strong>, <strong>ultrasons</strong>, <strong>inclinomètres</strong>, mesure dynamique.</li>
+                <li>Intégration des données dans une <strong>plateforme industrielle</strong>, traitement et extraction sous Python.</li>
+                <li>Réalisation de tests sur site client et <strong>validation technique</strong> des mesures et acquisitions.</li>
+                <li>Rédaction de documents : <strong>manuels utilisateurs</strong>, rapports de tests, recommandations techniques.</li>
+                <li>Participation à des réunions projet avec équipes internes et clients.</li>
+              </ul>
+            </div>
+
+            <!-- NOTE: You had a Vulcain/CCAMY experience commented in LaTeX; leaving it out here too. -->
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-inner section">
+            <h2>Projets techniques</h2>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">Système d’allumage à distance</div>
+                  <div class="item-sub">Arduino, Wi-Fi, carte ESP — pilotage du projet de bout en bout</div>
+                </div>
+              </div>
+              <ul class="bullets">
+                <li>De la <strong>conception</strong> à la <strong>validation du prototype</strong> (intégration, tests, mise au point).</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-head">
+                <div>
+                  <div class="item-title">Robot quadrupède</div>
+                  <div class="item-sub">Conception CAO & intégration électronique — planification, prototypage, validation</div>
+                </div>
+              </div>
+              <ul class="bullets">
+                <li>Gestion de la conception mécanique et de l’intégration électronique, <strong>planification</strong> des étapes de prototypage et <strong>validation des mouvements</strong> en conditions réelles.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</body>
 </html>

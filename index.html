@@ -1,166 +1,587 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mouhamadou Bamba Touré | Ingénieur Mécatronique</title>
-    <link rel="stylesheet" href="stylesheet.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="container">
-        <h1>Mouhamadou Bamba Touré</h1>
-        <h2>Ingénieur Mécatronique, Contrôle-Commande, Systèmes Industriels</h2>
-        <p class="subtitle">Industrie • Énergie • Ferroviaire</p>
-        <nav>
-          <a href="#accueil">Accueil</a>
-          <a href="#experiences">Expériences</a>
-          <a href="#projets">Projets</a>
-          <a href="#competences">Compétences</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <title>Mouhamadou Bamba TOURE — Portfolio</title>
+  <meta name="author" content="Mouhamadou Bamba TOURE" />
+  <meta name="description" content="Portfolio — Ingénieur Mécatronique, Contrôle Commande, Système Industriel (Industrie • Énergie • Ferroviaire)." />
 
-    <!-- ACCUEIL -->
-    <section id="accueil" class="section">
-      <div class="container">
-        <p>
-          Ingénieur mécatronique orienté contrôle-commande, systèmes industriels
-          et instrumentation. Je conçois, j’intègre et je valide des systèmes
-          mêlant mécanique, électronique et logiciel, avec une approche rigoureuse
-          et orientée résultats.
-        </p>
-        <div class="cta">
-          <a href="#projets" class="btn">Voir les projets</a>
-          <a href="#contact" class="btn secondary">Me contacter</a>
-        </div>
-      </div>
-    </section>
+  <!--
+    Dépose tes preuves ici :
+    /assets/docs/Rapport-PLP23INT23-INSAdogo.pdf
+    /assets/docs/Presentation-finale.pptx
+    /assets/docs/Rapport_IEEE_projet.pdf
+    /assets/docs/Rapport-5A.pdf
+    /assets/docs/Rapport-architecture-des-up.pdf
+    /assets/docs/Mise-en-Oeuvre-DSP.pdf
+    /assets/docs/RAPPORT-Servomecanisme.pdf
+  -->
 
-    <!-- EXPERIENCES -->
-    <section id="experiences" class="section dark">
-      <div class="container">
-        <h2>Expériences professionnelles</h2>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1621;
+      --panel2:#0c111a;
+      --text:#e6edf3;
+      --muted:#a7b3c1;
+      --faint:#7e8b9a;
+      --line:rgba(255,255,255,.10);
+      --accent:#4ea1ff;
+      --accent2:#68f0c5;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 900px at 15% 12%, rgba(78,161,255,.16), transparent 55%),
+        radial-gradient(900px 700px at 90% 18%, rgba(104,240,197,.10), transparent 55%),
+        radial-gradient(1000px 850px at 60% 85%, rgba(78,161,255,.08), transparent 60%),
+        var(--bg);
+      letter-spacing:.1px;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 24px 18px 60px}
 
-        <div class="exp">
-          <h3>DCM-ATN — Stage ingénieur (optimisation & modélisation)</h3>
-          <p><strong>Mission :</strong> Étude et amélioration du procédé de séchage (héliogravure), via modélisation thermique et optimisation.</p>
-          <p><strong>Résultats :</strong> Modèle et simulations sous Matlab/Simulink, comparaison PID optimisé / MPC.</p>
-          <p><strong>Outils :</strong> Matlab, Simulink, analyse de données, validation expérimentale.</p>
-        </div>
+    .topbar{
+      position: sticky; top:0; z-index:50;
+      background: linear-gradient(to bottom, rgba(11,15,20,.88), rgba(11,15,20,.60));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .inner{
+      max-width:var(--max); margin:0 auto;
+      padding: 14px 18px;
+      display:flex; gap:12px;
+      align-items:center; justify-content:space-between
+    }
+    .brand{display:flex; flex-direction:column; gap:2px}
+    .brand .name{font-weight:760; letter-spacing:.4px}
+    .brand .role{font-size:.92rem; color:var(--muted)}
+    .brand .subrole{font-size:.9rem; color:var(--faint)}
 
-        <div class="exp">
-          <h3>Fives FCB — Stage ingénieur (instrumentation & suivi machine)</h3>
-          <p><strong>Mission :</strong> Participation à un projet d’instrumentation de four rotatif pour suivi à distance.</p>
-          <p><strong>Résultats :</strong> Mise en place et validation des capteurs (IO-Link), rapport de validation sur site client.</p>
-          <p><strong>Outils :</strong> Capteurs, Python, communication IO-Link, acquisition et exploitation de données.</p>
-        </div>
-      </div>
-    </section>
+    .nav{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end
+    }
+    .nav a{
+      text-decoration:none;
+      font-size:.95rem;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      transition: .18s ease;
+      white-space:nowrap;
+    }
+    .nav a:hover{color:var(--text); border-color: var(--line); background: rgba(255,255,255,.03)}
 
-    <!-- PROJETS -->
-    <section id="projets" class="section">
-      <div class="container">
-        <h2>Projets principaux</h2>
+    .pill{
+      font-size:.9rem;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding:8px 10px;
+      border-radius:999px;
+      color:var(--muted);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .pill strong{color:var(--text); font-weight:650}
 
-        <div class="project">
-          <h3>INSAdogo – Robot quadrupède Wi-Fi</h3>
-          <p>
-            Prototype de robot quadrupède (8 servomoteurs, caméra, Wi-Fi)
-            conçu pour marche et redressement autonome, piloté par Raspberry Pi 4
-            et servos Dynamixel AX-12A.
-          </p>
-          <ul>
-            <li>Cycle de marche + relevage autonome</li>
-            <li>Communication Wi-Fi et commande à distance</li>
-            <li>Budget total ≤ 1000 €</li>
-          </ul>
-          <a href="rapport-quadrupede.pdf" target="_blank" class="btn">Voir le rapport</a>
-          <a href="presentation-quadrupede.pdf" target="_blank" class="btn secondary">Présentation finale</a>
-        </div>
+    .icons{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      appearance:none; border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      transition:.18s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(78,161,255,.45); background: rgba(78,161,255,.08)}
+    .btn.primary{
+      border-color: rgba(78,161,255,.40);
+      background: linear-gradient(180deg, rgba(78,161,255,.15), rgba(78,161,255,.06));
+    }
 
-        <div class="project">
-          <h3>Allumage à distance sécurisé – Wi-Fi / I2C / AESLib</h3>
-          <p>
-            Système sécurisé d’allumage de feux d’artifice : architecture à trois cartes (contrôle / ignition / Nano) communiquant par Wi-Fi, Bluetooth et bus I2C. 
-            Chiffrement AES pour sécuriser les échanges et commandes à distance.
-          </p>
-          <ul>
-            <li>Contrôle via Arduino Nano + ESP8266</li>
-            <li>Communication Wi-Fi et protocole sécurisé AESLib</li>
-            <li>Tests d’allumage et validation fonctionnelle</li>
-          </ul>
-          <a href="rapport-ieee.pdf" target="_blank" class="btn">Rapport IEEE</a>
-          <a href="rapport-5A.pdf" target="_blank" class="btn secondary">Rapport général</a>
-        </div>
+    .hero{
+      margin-top: 22px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: var(--radius2);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(900px 420px at 18% 10%, rgba(78,161,255,.18), transparent 55%),
+        radial-gradient(700px 360px at 88% 28%, rgba(104,240,197,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .hero > *{position:relative}
+    .hero h1{margin:0 0 12px; font-size: clamp(1.6rem, 2.3vw, 2.2rem)}
+    .subtitle{color:var(--muted); margin:0 0 18px; line-height:1.6; max-width: 90ch}
+    .chips{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      border:1px solid var(--line);
+      background: rgba(12,17,26,.55);
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius:999px;
+      font-size:.9rem;
+    }
 
-        <h2>Projets secondaires</h2>
-        <div class="subprojects">
-          <div class="subproj">
-            <h4>Interrupteur Clap – DSP temps réel (dsPIC)</h4>
-            <p>Implémentation DSP sous MPLAB, détection audio en temps réel et logique de déclenchement.</p>
-          </div>
-          <div class="subproj">
-            <h4>Architecture µP – Conception & intégration</h4>
-            <p>Analyse et intégration d’une architecture microprocesseur, choix composants, communication I²C/SPI.</p>
-          </div>
-          <div class="subproj">
-            <h4>Servomécanisme – Dimensionnement moteur / variateur</h4>
-            <p>Cahier des charges, calcul vis à billes, sélection variateur, modélisation du système.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns: 1fr}
+      .nav{display:none}
+    }
 
-    <!-- COMPETENCES -->
-    <section id="competences" class="section dark">
-      <div class="container">
-        <h2>Compétences</h2>
-        <div class="grid">
-          <div>
-            <h4>Techniques</h4>
-            <ul>
-              <li>Contrôle-commande, systèmes industriels</li>
-              <li>Instrumentation, intégration mécatronique</li>
-              <li>Microcontrôleurs, bus de communication (I²C, Wi-Fi, Bluetooth)</li>
-              <li>Tests, validation, documentation technique</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Domaines</h4>
-            <ul>
-              <li>Industrie</li>
-              <li>Énergie</li>
-              <li>Ferroviaire</li>
-            </ul>
-            <h4>Qualités</h4>
-            <ul>
-              <li>Rigueur</li>
-              <li>Proactivité</li>
-              <li>Adaptation</li>
-              <li>Travail d’équipe</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    section{
+      margin-top: 18px;
+      border:1px solid var(--line);
+      background: rgba(15,22,33,.55);
+      border-radius: var(--radius2);
+      padding: 20px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    }
+    section h2{margin:0 0 12px; font-size: 1.15rem; letter-spacing:.25px}
+    .muted{color: var(--muted)}
+    .faint{color: var(--faint)}
+    .small{font-size:.92rem}
 
-    <!-- CONTACT -->
-    <footer id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          <strong>Téléphone :</strong> 06 10 25 94 57<br />
-          <strong>Email :</strong> bambv0702@gmail.com
-        </p>
-        <p>
-          <a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a> |
-          <a href="https://github.com/..." target="_blank">GitHub</a>
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+    .kvs{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 14px;
+      margin-top: 10px;
+    }
+    @media (max-width: 640px){
+      .kvs{grid-template-columns:1fr}
+    }
+    .kv{
+      border:1px solid var(--line);
+      background: rgba(12,17,26,.55);
+      border-radius: 16px;
+      padding: 12px 12px;
+    }
+    .kv .k{font-size:.86rem; color: var(--faint); font-family: var(--mono)}
+    .kv .v{margin-top:6px; color: var(--text); line-height:1.5}
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+    }
+    @media (max-width: 980px){ .cards{grid-template-columns:1fr} }
+
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: var(--radius2);
+      padding: 16px;
+      overflow:hidden;
+    }
+    .card h3{margin:0 0 8px; font-size:1.05rem}
+    .card p{margin:0 0 12px; color: var(--muted); line-height:1.6}
+
+    .meta{display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 12px}
+    .tag{
+      padding:6px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color: var(--muted);
+      font-size:.85rem;
+      background: rgba(12,17,26,.55);
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+
+    details{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(12,17,26,.55);
+      padding: 10px 12px;
+      margin-top: 10px;
+    }
+    details summary{
+      cursor:pointer;
+      color: var(--text);
+      font-weight:650;
+      list-style:none;
+    }
+    details summary::-webkit-details-marker{display:none}
+    details p{color: var(--muted); line-height:1.6}
+    ul{margin:10px 0 0 18px; color: var(--muted)}
+    li{margin:6px 0}
+
+    .iframeShell{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      overflow:hidden;
+      background: rgba(12,17,26,.65);
+      margin-top: 10px;
+    }
+    iframe{border:0; width:100%}
+
+    .tabs{display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px}
+    .tabBtn{
+      border:1px solid var(--line);
+      background: rgba(12,17,26,.55);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      transition:.16s ease;
+      font-weight:650;
+    }
+    .tabBtn[aria-selected="true"]{
+      border-color: rgba(78,161,255,.40);
+      background: linear-gradient(180deg, rgba(78,161,255,.15), rgba(78,161,255,.06));
+    }
+
+    .footer{
+      margin-top: 22px;
+      color: var(--faint);
+      font-size:.9rem;
+      text-align:center;
+      padding: 12px 0 0;
+    }
+    .divider{height:1px; background: var(--line); margin: 10px 0 14px;}
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="name">Mouhamadou Bamba TOURE</div>
+        <div class="role">Ingénieur Mécatronique, Contrôle Commande, Système Industriel</div>
+        <div class="subrole">Industrie • Énergie • Ferroviaire</div>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="icons">
+        <a class="pill" href="mailto:bambatoure0702@gmail.com" title="Envoyer un email">✉️ <strong>Email</strong> <span class="muted">bambatoure0702@gmail.com</span></a>
+        <a class="pill" href="tel:+33610259457" title="Appeler">📞 <strong>Tél</strong> <span class="muted">+33 6 10 25 94 57</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="btn" href="https://bambatoure0702-max.github.io/" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="btn primary" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Portfolio — Profil généraliste orienté systèmes & validation</h1>
+      <p class="subtitle">
+        Ingénieur généraliste en mécatronique avec un socle solide en <strong>automatisme / contrôle-commande</strong>,
+        instrumentation, intégration et validation terrain. J’interviens en support de la gestion de projet sur des
+        sujets techniques : cadrage, prototypage, essais, documentation, coordination.
+      </p>
+      <div class="chips" aria-label="Points clés">
+        <span class="chip">Contrôle-commande (PID / MPC)</span>
+        <span class="chip">Systèmes industriels & instrumentation</span>
+        <span class="chip">Systèmes embarqués (Arduino / ESP)</span>
+        <span class="chip">Validation & essais</span>
+        <span class="chip">Documentation technique</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section id="apropos">
+        <h2>À propos</h2>
+        <p class="muted">
+          Je suis un ingénieur mécatronique orienté solutions, capable d’évoluer dans des environnements techniques variés
+          (industrie, énergie, ferroviaire). Mon profil est pluridisciplinaire : mécanique, électronique, automatique,
+          instrumentation et informatique. J’aime les projets où il faut comprendre le système, structurer la réalisation
+          et valider sur le terrain.
+        </p>
+
+        <div class="kvs">
+          <div class="kv">
+            <div class="k">Positionnement</div>
+            <div class="v">Contrôle-commande • Instrumentation • Validation • Systèmes industriels/embarqués (support projet)</div>
+          </div>
+          <div class="kv">
+            <div class="k">Localisation</div>
+            <div class="v">Paris / France</div>
+          </div>
+          <div class="kv">
+            <div class="k">Forces</div>
+            <div class="v">Rigueur • Proactivité • Adaptation • Travail d’équipe</div>
+          </div>
+          <div class="kv">
+            <div class="k">Objectif</div>
+            <div class="v">Valoriser des résultats concrets + preuves (rapports, présentations, démos)</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="competences">
+        <h2>Compétences & habilitations</h2>
+
+        <details open>
+          <summary>Automatisme & contrôle-commande</summary>
+          <ul>
+            <li>CEI 61131-3 (Ladder, FBD, ST) — bases et logique de contrôle</li>
+            <li>Régulation : PID / MPC — Matlab/Simulink</li>
+            <li>LabVIEW (notions)</li>
+          </ul>
+        </details>
+
+        <div class="divider"></div>
+
+        <details>
+          <summary>Instrumentation & systèmes industriels</summary>
+          <ul>
+            <li>Capteurs industriels (inductifs, ultrasons, inclinomètres, mesure dynamique)</li>
+            <li>Intégration et exploitation de données (Python)</li>
+            <li>Essais terrain, validation des mesures, documentation</li>
+          </ul>
+        </details>
+
+        <div class="divider"></div>
+
+        <details>
+          <summary>Électronique / embarqué / programmation</summary>
+          <ul>
+            <li>Arduino / ESP / Wi-Fi</li>
+            <li>Python • C/C++ • VHDL • VBA (selon besoins)</li>
+          </ul>
+        </details>
+
+        <div class="divider"></div>
+
+        <details>
+          <summary>Habilitations (TES)</summary>
+          <ul>
+            <li>Certificat d’aptitude physique TES (jusqu’en 2030)</li>
+            <li>Certificat d’aptitude psychologique TES</li>
+          </ul>
+        </details>
+      </section>
+    </div>
+
+    <section id="experiences">
+      <h2>Expériences professionnelles</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>DCM ATN — Stagiaire ingénieur automatisme (régulation thermique)</h3>
+          <p class="muted small">Mars 2024 → Septembre 2024 • Nanterre</p>
+
+          <div class="meta">
+            <span class="tag">Matlab/Simulink</span>
+            <span class="tag">PID</span>
+            <span class="tag">MPC</span>
+            <span class="tag">Instrumentation thermique</span>
+          </div>
+
+          <details open>
+            <summary>Mission</summary>
+            <p>Optimiser et stabiliser un procédé industriel via la modélisation thermique et la mise en place de stratégies de régulation.</p>
+          </details>
+
+          <details>
+            <summary>Résultats / livrables</summary>
+            <ul>
+              <li>Modélisation thermique complète + simulations sous Matlab/Simulink</li>
+              <li>Conception, réglage et validation de correcteurs PID & MPC</li>
+              <li>Tests sur installation réelle + protocoles</li>
+              <li>Rapports techniques et dossiers (CIR)</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Outils</summary>
+            <ul>
+              <li>Matlab/Simulink</li>
+              <li>Instrumentation thermique</li>
+              <li>Rédaction & documentation technique</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="card">
+          <h3>Fives FCB — Stagiaire ingénieur instrumentation (surveillance machine)</h3>
+          <p class="muted small">Septembre 2022 → Février 2023 • Lille</p>
+
+          <div class="meta">
+            <span class="tag">Capteurs industriels</span>
+            <span class="tag">Python</span>
+            <span class="tag">Instrumentation</span>
+            <span class="tag">Validation terrain</span>
+          </div>
+
+          <details open>
+            <summary>Mission</summary>
+            <p>Déployer une instrumentation pour surveiller l’état d’une machine industrielle et valider la chaîne de mesure sur site client.</p>
+          </details>
+
+          <details>
+            <summary>Résultats / livrables</summary>
+            <ul>
+              <li>Installation + configuration capteurs (inductifs, ultrasons, inclinomètres)</li>
+              <li>Intégration data sur plateforme industrielle + traitement sous Python</li>
+              <li>Tests sur site client + validation des acquisitions</li>
+              <li>Manuels utilisateurs, rapports de tests, recommandations</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Outils</summary>
+            <ul>
+              <li>Capteurs industriels</li>
+              <li>Python</li>
+              <li>Architecture industrielle & documentation</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Projets techniques</h2>
+      <p class="muted">Projets principaux + secondaires. Chaque projet contient un résumé et un viewer PDF intégré.</p>
+
+      <h3 style="margin:14px 0 10px">Projets principaux</h3>
+
+      <div class="cards">
+        <!-- Projet principal 1 -->
+        <article class="card" id="proj-quadrupede">
+          <h3>QUAD-WALK — Robot quadrupède (prototype & cycle de marche)</h3>
+          <p>Projet “type industriel” : intégration, prototypage, essais et documentation, avec démonstration du résultat final.</p>
+
+          <div class="meta">
+            <span class="tag">Intégration</span>
+            <span class="tag">Prototypage</span>
+            <span class="tag">Tests</span>
+            <span class="tag">Documentation</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://www.youtube.com/watch?v=BrZalceiYtI&t=4s" target="_blank" rel="noreferrer">Vidéo YouTube ↗</a>
+            <a class="btn primary" href="assets/docs/Rapport-PLP23INT23-INSAdogo.pdf" target="_blank" rel="noreferrer">Rapport (PDF) ↗</a>
+            <a class="btn" href="assets/docs/Presentation-finale.pptx" target="_blank" rel="noreferrer">Présentation (PPTX) ↗</a>
+          </div>
+
+          <details open>
+            <summary>Résumé (déroulant)</summary>
+            <ul>
+              <li><strong>Objectif :</strong> concevoir/intégrer un robot quadrupède et valider un cycle de marche</li>
+              <li><strong>Approche :</strong> intégration mécatronique, mise au point, essais, livrables</li>
+              <li><strong>Résultat :</strong> démonstration fonctionnelle (vidéo)</li>
+              <li><strong>Preuve :</strong> rapport PDF + présentation</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Viewer PDF intégré</summary>
+            <div class="iframeShell">
+              <iframe title="Rapport quadrupède — viewer intégré" src="assets/docs/Rapport-PLP23INT23-INSAdogo.pdf" height="780"></iframe>
+            </div>
+          </details>
+        </article>
+
+        <!-- Projet principal 2 -->
+        <article class="card" id="proj-allumage">
+          <h3>IGNITE-LINK — Système d’allumage à distance (Arduino / ESP / Wi-Fi)</h3>
+          <p>Conception/prototypage/intégration/validation + documentation. Preuve principale : rapport IEEE.</p>
+
+          <div class="meta">
+            <span class="tag">Arduino</span>
+            <span class="tag">ESP</span>
+            <span class="tag">Wi-Fi</span>
+            <span class="tag">Embarqué</span>
+            <span class="tag">Tests</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="assets/docs/Rapport_IEEE_projet.pdf" target="_blank" rel="noreferrer">Rapport IEEE (PDF) ↗</a>
+            <a class="btn" href="assets/docs/Rapport-5A.pdf" target="_blank" rel="noreferrer">Rapport général (PDF) ↗</a>
+          </div>
+
+          <details open>
+            <summary>Résumé (déroulant)</summary>
+            <ul>
+              <li><strong>Objectif :</strong> réaliser un système d’allumage à distance connecté</li>
+              <li><strong>Approche :</strong> prototype → intégration → essais → validation</li>
+              <li><strong>Résultat :</strong> démonstration fonctionnelle + documentation</li>
+              <li><strong>Preuves :</strong> IEEE (principal) + rapport général (complément)</li>
+            </ul>
+          </details>
+
+          <details open>
+            <summary>Viewer PDF intégré (choix du rapport)</summary>
+
+            <div class="tabs" role="tablist" aria-label="Choix du rapport">
+              <button class="tabBtn" id="tab-ieee" role="tab" aria-selected="true" aria-controls="panel-ieee">Rapport IEEE</button>
+              <button class="tabBtn" id="tab-5a" role="tab" aria-selected="false" aria-controls="panel-5a">Rapport général</button>
+            </div>
+
+            <div id="panel-ieee" role="tabpanel" aria-labelledby="tab-ieee">
+              <div class="iframeShell">
+                <iframe title="Rapport IEEE — viewer intégré" src="assets/docs/Rapport_IEEE_projet.pdf" height="780"></iframe>
+              </div>
+            </div>
+
+            <div id="panel-5a" role="tabpanel" aria-labelledby="tab-5a" hidden>
+              <div class="iframeShell">
+                <iframe title="Rapport général — viewer intégré" src="assets/docs/Rapport-5A.pdf" height="780"></iframe>
+              </div>
+            </div>
+
+            <p class="faint small" style="margin-top:10px">
+              Les PDF s’ouvrent aussi dans un nouvel onglet via les boutons ci-dessus.
+            </p>
+          </details>
+        </article>
+      </div>
+
+      <h3 style="margin:18px 0 10px">Projets secondaires</h3>
+      <div class="cards">
+        <article class="card">
+          <h3>Architecture des µP — Rapport</h3>
+          <p>Livrable écrit (preuve PDF) + viewer intégré.</p>
+          <div class="actions">
+            <a class="btn" href="assets/docs/Rapport-architecture-des-up.pdf" target="_blank" rel="noreferrer">Ouvrir le PDF ↗</a>
+          </div>
+          <details>
+            <summary>Viewer PDF intégré</summary>
+            <div class="iframeShell">
+              <iframe title="Architecture des µP" src="assets/docs/Rapport-architecture-des-up.pdf" height="540"></iframe>
+            </div

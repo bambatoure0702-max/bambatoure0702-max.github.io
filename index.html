@@ -7,10 +7,6 @@
   <meta name="author" content="Mouhamadou Bamba Touré">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Option 1: garder ton fichier CSS externe -->
-  <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
-
-  <!-- Option 2: tout dans le même fichier (plus simple pour commencer) -->
   <style>
     :root{
       --bg:#0b0f14;
@@ -277,45 +273,192 @@
     <section id="experiences">
       <div class="section-head">
         <h2>Expériences professionnelles</h2>
-        <p>Format : mission • outils • résultats (100% factuel)</p>
+        <p>Format : missions • résultats • outils (100% factuel)</p>
       </div>
 
-      <div class="grid">
-        <details open>
-          <summary>
-            <div class="sum-left">
-              <div class="sum-title">DCM ATN — Régulation thermique (stage)</div>
-              <div class="sum-sub">Matlab/Simulink • PID/MPC • instrumentation thermique</div>
-            </div>
-            <span class="pill">Mission → Résultats</span>
-          </summary>
-          <div class="body">
-            <p><b>Mission</b> : analyse et amélioration d’un procédé de séchage industriel (régulation thermique).</p>
-            <ul class="bullets">
-              <li><b>Outils</b> : Matlab/Simulink, PID, MPC, instrumentation thermique.</li>
-              <li><b>Travaux</b> : analyse du comportement thermique, modélisation & simulation, réglage/validation de correcteurs, tests sur installation réelle.</li>
-              <li><b>Livrables</b> : rapports techniques (résultats de simulation, protocoles de test, documentation).</li>
-            </ul>
-          </div>
-        </details>
+      <div class="card">
+        <div class="inner">
+          <!-- Bloc détaillé intégré (table) -->
+          <table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin:0 auto;">
+            <tbody>
 
-        <details>
-          <summary>
-            <div class="sum-left">
-              <div class="sum-title">Fives FCB — Instrumentation fours rotatifs (stage)</div>
-              <div class="sum-sub">Capteurs industriels • Python • tests site client</div>
-            </div>
-            <span class="pill">Mission → Résultats</span>
-          </summary>
-          <div class="body">
-            <p><b>Mission</b> : instrumentation de machines et mise en place de la collecte de données.</p>
-            <ul class="bullets">
-              <li><b>Outils</b> : capteurs industriels, Python, architecture industrielle.</li>
-              <li><b>Travaux</b> : définition des besoins, installation/configuration capteurs, intégration et traitement de données, validation technique.</li>
-              <li><b>Livrables</b> : rapports de tests, manuels utilisateurs, recommandations techniques.</li>
-            </ul>
-          </div>
-        </details>
+              <!-- Intro courte -->
+              <tr>
+                <td style="padding:0 0 14px 0; width:100%; vertical-align:middle;">
+                  <p style="margin:0; opacity:.85; color:var(--muted); line-height:1.6;">
+                    Une approche factuelle : <b style="color:var(--text)">missions</b>, <b style="color:var(--text)">résultats</b>, <b style="color:var(--text)">outils</b>.
+                  </p>
+                </td>
+              </tr>
+
+              <!-- DCM ATN -->
+              <tr>
+                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.01);">
+                  <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;">
+                    <tbody>
+                      <tr>
+                        <td style="width:22%; vertical-align:top; padding-right:14px;">
+                          <p style="margin:0; font-weight:800;">DCM-ATN</p>
+                          <p style="margin:6px 0 0 0; opacity:.85; color:var(--muted);">Nanterre</p>
+                          <p style="margin:6px 0 0 0; opacity:.85; color:var(--muted);">Mars – Juillet 2024</p>
+                        </td>
+
+                        <td style="width:78%; vertical-align:top;">
+                          <p style="margin:0; font-weight:800;">
+                            Stage de fin d’études — Ingénieur mécatronique / automatisme (R&amp;D)
+                          </p>
+
+                          <p style="margin:8px 0 0 0; opacity:.9; color:var(--muted); line-height:1.6;">
+                            <b style="color:var(--text)">Contexte</b> : amélioration de la régulation de température des <b style="color:var(--text)">séchoirs</b> de machines d’héliogravure
+                            (chauffage par fluide thermique, boîtes de recyclage / groupe), avec objectif de <b style="color:var(--text)">stabilité process</b> et
+                            <b style="color:var(--text)">rendement énergétique</b>.
+                          </p>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Missions</p>
+                            <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
+                              <li>
+                                Analyse du procédé : compréhension du cycle de séchage, identification des variables influentes,
+                                sources de perturbations et contraintes d’exploitation.
+                              </li>
+                              <li>
+                                <b style="color:var(--text)">Modélisation & simulation</b> : construction d’un modèle thermique exploitable sous <b style="color:var(--text)">Matlab/Simulink</b>,
+                                simulation de scénarios et analyse des comportements (stabilité, temps de réponse, dépassement, rejets de perturbations).
+                              </li>
+                              <li>
+                                <b style="color:var(--text)">Régulation</b> : conception et évaluation de stratégies de contrôle
+                                (<b style="color:var(--text)">PID</b> optimisé, <b style="color:var(--text)">MPC</b>, et travaux de simulation avec contrôleur <b style="color:var(--text)">FLC</b> tel que structuré dans le rapport).
+                              </li>
+                              <li>
+                                <b style="color:var(--text)">Validation</b> : réalisation d’essais, interprétation des résultats, ajustements et formalisation des protocoles.
+                              </li>
+                              <li>
+                                Contributions techniques annexes : ajout d’une option de <b style="color:var(--text)">gaufrage</b> (Epochief) avec essais sur matériaux et rédaction associée,
+                                étude comparative sur des <b style="color:var(--text)">bagues de broches</b> (ARNITE / acier / aluminium) et contributions à des dossiers <b style="color:var(--text)">CIR/CII</b>.
+                              </li>
+                              <li>
+                                Travail en interface avec tuteur, bureau électrique/automatisme, techniciens et autres stagiaires (suivi, arbitrages, compte-rendus).
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Résultats & livrables</p>
+                            <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
+                              <li>Modèle Simulink + jeux de simulation permettant de comparer plusieurs approches de régulation.</li>
+                              <li>Analyses comparatives (qualité de régulation, rejets de perturbations, recommandations de réglages).</li>
+                              <li>Rapports techniques structurés : hypothèses, méthode, résultats, limites, pistes d’amélioration.</li>
+                              <li>Dossiers et supports internes (dont éléments CIR/CII) documentant objectifs, méthodes et preuves techniques.</li>
+                              <li>Éléments d’aide à la décision sur le choix de composants / matériaux (comparatifs et critères de performance).</li>
+                            </ul>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Outils</p>
+                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
+                              Matlab/Simulink • Modélisation thermique • PID / MPC • Analyse de performance • Tests • Rédaction technique
+                            </p>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Ce que ça démontre</p>
+                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
+                              Capacité à passer d’un système industriel réel à un modèle exploitable, proposer/évaluer des lois de commande,
+                              structurer des essais, et livrer une documentation claire pour décision technique.
+                            </p>
+                          </div>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr><td style="height:14px;"></td></tr>
+
+              <!-- FIVES FCB -->
+              <tr>
+                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.01);">
+                  <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;">
+                    <tbody>
+                      <tr>
+                        <td style="width:22%; vertical-align:top; padding-right:14px;">
+                          <p style="margin:0; font-weight:800;">Fives FCB</p>
+                          <p style="margin:6px 0 0 0; opacity:.85; color:var(--muted);">Lille / Villeneuve d’Ascq</p>
+                          <p style="margin:6px 0 0 0; opacity:.85; color:var(--muted);">Sept. 2022 – Janv. 2023</p>
+                        </td>
+
+                        <td style="width:78%; vertical-align:top;">
+                          <p style="margin:0; font-weight:800;">
+                            Stage — Ingénieur instrumentation (Service Client / SAV) : monitoring d’un four rotatif
+                          </p>
+
+                          <p style="margin:8px 0 0 0; opacity:.9; color:var(--muted); line-height:1.6;">
+                            <b style="color:var(--text)">Contexte</b> : instrumentation d’un <b style="color:var(--text)">four rotatif</b> pour observer l’état machine via capteurs + plateforme / ordinateur industriel,
+                            avec objectif de fiabiliser le suivi et limiter les interventions terrain.
+                          </p>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Missions</p>
+                            <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
+                              <li>
+                                Analyse du besoin : définition des grandeurs à mesurer, contraintes d’installation et conditions industrielles (robustesse, sécurité, accessibilité).
+                              </li>
+                              <li>
+                                Sélection et mise en œuvre de capteurs : installation/configuration (ex. <b style="color:var(--text)">inductifs</b>, <b style="color:var(--text)">ultrasons</b>, <b style="color:var(--text)">inclinomètres</b>),
+                                câblage/pose et vérification de la cohérence des mesures.
+                              </li>
+                              <li>
+                                Mise en place d’une chaîne de collecte : intégration sur plateforme/gateway industrielle, préparation des visualisations (dashboards).
+                              </li>
+                              <li>
+                                Traitement et exploitation sous <b style="color:var(--text)">Python</b> : nettoyage, extraction d’indicateurs, vérifications simples de cohérence.
+                              </li>
+                              <li>
+                                Tests sur site client et itérations : validation technique, ajustements, échanges avec équipes internes/clients.
+                              </li>
+                              <li>
+                                Documentation : rédaction de livrables de transfert (manuel utilisateur, rapport / recommandations, suivi d’avancement).
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Résultats & livrables</p>
+                            <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
+                              <li>Chaîne d’instrumentation opérationnelle testée en conditions terrain (capteurs → plateforme → visualisation).</li>
+                              <li>Dashboards / vues de suivi facilitant l’interprétation des mesures par l’équipe.</li>
+                              <li>Scripts / traitements Python pour exploiter les acquisitions et produire des indicateurs simples.</li>
+                              <li>Documents de transmission : manuel utilisateur, rapports de tests, recommandations techniques.</li>
+                            </ul>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Outils</p>
+                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
+                              Capteurs industriels • Instrumentation / acquisition • Plateforme/gateway • Dashboards • Python • Rédaction technique
+                            </p>
+                          </div>
+
+                          <div style="margin-top:12px;">
+                            <p style="margin:0; font-weight:800;">Ce que ça démontre</p>
+                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
+                              Capacité à instrumenter un système réel, fiabiliser une chaîne d’acquisition, valider sur site, et livrer une documentation utilisable par l’équipe.
+                            </p>
+                          </div>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- /Bloc détaillé -->
+        </div>
       </div>
     </section>
 

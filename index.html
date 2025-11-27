@@ -1,83 +1,166 @@
-/* --- GLOBAL --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #0f1115;
-  color: #eaeaea;
-  line-height: 1.6;
-}
-.container { width: 90%; max-width: 1000px; margin: auto; }
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouhamadou Bamba Touré | Ingénieur Mécatronique</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
 
-/* --- HEADER --- */
-header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #1b1d22;
-}
-header h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
-header h2 { font-size: 1.2rem; font-weight: 400; color: #bbb; }
-header .subtitle { color: #888; margin-bottom: 1rem; }
-nav a {
-  margin: 0 10px;
-  color: #00bcd4;
-  text-decoration: none;
-  font-weight: 500;
-}
-nav a:hover { text-decoration: underline; }
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <h1>Mouhamadou Bamba Touré</h1>
+        <h2>Ingénieur Mécatronique, Contrôle-Commande, Systèmes Industriels</h2>
+        <p class="subtitle">Industrie • Énergie • Ferroviaire</p>
+        <nav>
+          <a href="#accueil">Accueil</a>
+          <a href="#experiences">Expériences</a>
+          <a href="#projets">Projets</a>
+          <a href="#competences">Compétences</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-/* --- SECTIONS --- */
-.section { padding: 3rem 0; }
-.section.dark { background: #181a1f; }
-.section h2 { margin-bottom: 1.5rem; text-align: center; color: #00bcd4; }
+    <!-- ACCUEIL -->
+    <section id="accueil" class="section">
+      <div class="container">
+        <p>
+          Ingénieur mécatronique orienté contrôle-commande, systèmes industriels
+          et instrumentation. Je conçois, j’intègre et je valide des systèmes
+          mêlant mécanique, électronique et logiciel, avec une approche rigoureuse
+          et orientée résultats.
+        </p>
+        <div class="cta">
+          <a href="#projets" class="btn">Voir les projets</a>
+          <a href="#contact" class="btn secondary">Me contacter</a>
+        </div>
+      </div>
+    </section>
 
-/* --- EXPERIENCE --- */
-.exp { margin-bottom: 2rem; border-left: 4px solid #00bcd4; padding-left: 1rem; }
+    <!-- EXPERIENCES -->
+    <section id="experiences" class="section dark">
+      <div class="container">
+        <h2>Expériences professionnelles</h2>
 
-/* --- PROJECTS --- */
-.project {
-  margin-bottom: 2rem;
-  background: #1a1d22;
-  padding: 1.5rem;
-  border-radius: 6px;
-}
-.project h3 { color: #00bcd4; }
-.project ul { margin: 0.5rem 0 1rem 1.2rem; }
-.project a.btn {
-  background: #00bcd4;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  margin-right: 8px;
-  text-decoration: none;
-}
-.project a.btn.secondary {
-  background: #444;
-}
-.project a.btn:hover { background: #008fa1; }
+        <div class="exp">
+          <h3>DCM-ATN — Stage ingénieur (optimisation & modélisation)</h3>
+          <p><strong>Mission :</strong> Étude et amélioration du procédé de séchage (héliogravure), via modélisation thermique et optimisation.</p>
+          <p><strong>Résultats :</strong> Modèle et simulations sous Matlab/Simulink, comparaison PID optimisé / MPC.</p>
+          <p><strong>Outils :</strong> Matlab, Simulink, analyse de données, validation expérimentale.</p>
+        </div>
 
-/* --- SUBPROJECTS --- */
-.subprojects { display: grid; gap: 1rem; }
-.subproj {
-  background: #1a1d22;
-  padding: 1rem;
-  border-radius: 6px;
-}
+        <div class="exp">
+          <h3>Fives FCB — Stage ingénieur (instrumentation & suivi machine)</h3>
+          <p><strong>Mission :</strong> Participation à un projet d’instrumentation de four rotatif pour suivi à distance.</p>
+          <p><strong>Résultats :</strong> Mise en place et validation des capteurs (IO-Link), rapport de validation sur site client.</p>
+          <p><strong>Outils :</strong> Capteurs, Python, communication IO-Link, acquisition et exploitation de données.</p>
+        </div>
+      </div>
+    </section>
 
-/* --- COMPETENCES --- */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-h4 { color: #00bcd4; margin-bottom: 0.5rem; }
-ul li { margin-left: 1.2rem; }
+    <!-- PROJETS -->
+    <section id="projets" class="section">
+      <div class="container">
+        <h2>Projets principaux</h2>
 
-/* --- FOOTER --- */
-footer {
-  background: #1b1d22;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-footer a { color: #00bcd4; }
+        <div class="project">
+          <h3>INSAdogo – Robot quadrupède Wi-Fi</h3>
+          <p>
+            Prototype de robot quadrupède (8 servomoteurs, caméra, Wi-Fi)
+            conçu pour marche et redressement autonome, piloté par Raspberry Pi 4
+            et servos Dynamixel AX-12A.
+          </p>
+          <ul>
+            <li>Cycle de marche + relevage autonome</li>
+            <li>Communication Wi-Fi et commande à distance</li>
+            <li>Budget total ≤ 1000 €</li>
+          </ul>
+          <a href="rapport-quadrupede.pdf" target="_blank" class="btn">Voir le rapport</a>
+          <a href="presentation-quadrupede.pdf" target="_blank" class="btn secondary">Présentation finale</a>
+        </div>
 
-/* --- CTA BUTTONS --- */
-.cta { margin-top: 1.5rem; text-align: center; }
-.btn { background: #00bcd4; color: white; padding: 0.7rem 1.4rem; border-radius: 4px; text-decoration: none; margin: 0 0.5rem; }
-.btn.secondary { background: #444; }
-.btn:hover { background: #008fa1; }
+        <div class="project">
+          <h3>Allumage à distance sécurisé – Wi-Fi / I2C / AESLib</h3>
+          <p>
+            Système sécurisé d’allumage de feux d’artifice : architecture à trois cartes (contrôle / ignition / Nano) communiquant par Wi-Fi, Bluetooth et bus I2C. 
+            Chiffrement AES pour sécuriser les échanges et commandes à distance.
+          </p>
+          <ul>
+            <li>Contrôle via Arduino Nano + ESP8266</li>
+            <li>Communication Wi-Fi et protocole sécurisé AESLib</li>
+            <li>Tests d’allumage et validation fonctionnelle</li>
+          </ul>
+          <a href="rapport-ieee.pdf" target="_blank" class="btn">Rapport IEEE</a>
+          <a href="rapport-5A.pdf" target="_blank" class="btn secondary">Rapport général</a>
+        </div>
+
+        <h2>Projets secondaires</h2>
+        <div class="subprojects">
+          <div class="subproj">
+            <h4>Interrupteur Clap – DSP temps réel (dsPIC)</h4>
+            <p>Implémentation DSP sous MPLAB, détection audio en temps réel et logique de déclenchement.</p>
+          </div>
+          <div class="subproj">
+            <h4>Architecture µP – Conception & intégration</h4>
+            <p>Analyse et intégration d’une architecture microprocesseur, choix composants, communication I²C/SPI.</p>
+          </div>
+          <div class="subproj">
+            <h4>Servomécanisme – Dimensionnement moteur / variateur</h4>
+            <p>Cahier des charges, calcul vis à billes, sélection variateur, modélisation du système.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section dark">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="grid">
+          <div>
+            <h4>Techniques</h4>
+            <ul>
+              <li>Contrôle-commande, systèmes industriels</li>
+              <li>Instrumentation, intégration mécatronique</li>
+              <li>Microcontrôleurs, bus de communication (I²C, Wi-Fi, Bluetooth)</li>
+              <li>Tests, validation, documentation technique</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Domaines</h4>
+            <ul>
+              <li>Industrie</li>
+              <li>Énergie</li>
+              <li>Ferroviaire</li>
+            </ul>
+            <h4>Qualités</h4>
+            <ul>
+              <li>Rigueur</li>
+              <li>Proactivité</li>
+              <li>Adaptation</li>
+              <li>Travail d’équipe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          <strong>Téléphone :</strong> 06 10 25 94 57<br />
+          <strong>Email :</strong> bambv0702@gmail.com
+        </p>
+        <p>
+          <a href="https://linkedin.com/in/..." target="_blank">LinkedIn</a> |
+          <a href="https://github.com/..." target="_blank">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

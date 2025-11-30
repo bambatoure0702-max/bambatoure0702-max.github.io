@@ -134,14 +134,6 @@
       margin-top:10px;
     }
     iframe{width:100%; height:100%; border:0; background:var(--panel2);}
-    .yt{
-      width:100%; height:360px;
-      border-radius:16px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      background: #000;
-      margin-top:10px;
-    }
     .footer{
       margin-top:28px; padding-top:18px;
       border-top:1px solid var(--line);
@@ -241,8 +233,6 @@
               <p class="v">Rigueur • Adaptation • Équipe</p>
             </div>
           </div>
-
-          <!-- ✅ supprimé : "Ce site remplace mon ancien site..." -->
         </div>
       </div>
     </div>
@@ -251,7 +241,6 @@
     <section id="apropos">
       <div class="section-head">
         <h2>À propos</h2>
-        <!-- ✅ supprimé : "Profil généraliste, polyvalent, orienté résultats" -->
       </div>
 
       <div class="card">
@@ -270,16 +259,12 @@
     <section id="experiences">
       <div class="section-head">
         <h2>Expériences professionnelles</h2>
-        <!-- ✅ supprimé : "Format : missions • résultats • outils (100% factuel)" -->
       </div>
 
       <div class="card">
         <div class="inner">
-          <!-- Bloc détaillé intégré (table) -->
           <table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin:0 auto;">
             <tbody>
-
-              <!-- ✅ supprimé : "Une approche factuelle : missions, résultats, outils." -->
 
               <!-- DCM ATN -->
               <tr>
@@ -307,28 +292,12 @@
                           <div style="margin-top:12px;">
                             <p style="margin:0; font-weight:800;">Missions</p>
                             <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
-                              <li>
-                                Analyse du procédé : compréhension du cycle de séchage, identification des variables influentes,
-                                sources de perturbations et contraintes d’exploitation.
-                              </li>
-                              <li>
-                                <b style="color:var(--text)">Modélisation & simulation</b> : construction d’un modèle thermique exploitable sous <b style="color:var(--text)">Matlab/Simulink</b>,
-                                simulation de scénarios et analyse des comportements (stabilité, temps de réponse, dépassement, rejets de perturbations).
-                              </li>
-                              <li>
-                                <b style="color:var(--text)">Régulation</b> : conception et évaluation de stratégies de contrôle
-                                (<b style="color:var(--text)">PID</b> optimisé, <b style="color:var(--text)">MPC</b>, et travaux de simulation avec contrôleur <b style="color:var(--text)">FLC</b> tel que structuré dans le rapport).
-                              </li>
-                              <li>
-                                <b style="color:var(--text)">Validation</b> : réalisation d’essais, interprétation des résultats, ajustements et formalisation des protocoles.
-                              </li>
-                              <li>
-                                Contributions techniques annexes : ajout d’une option de <b style="color:var(--text)">gaufrage</b> (Epochief) avec essais sur matériaux et rédaction associée,
-                                étude comparative sur des <b style="color:var(--text)">bagues de broches</b> (ARNITE / acier / aluminium) et contributions à des dossiers <b style="color:var(--text)">CIR/CII</b>.
-                              </li>
-                              <li>
-                                Travail en interface avec tuteur, bureau électrique/automatisme, techniciens et autres stagiaires (suivi, arbitrages, compte-rendus).
-                              </li>
+                              <li>Analyse du procédé : compréhension du cycle de séchage, identification des variables influentes, perturbations et contraintes d’exploitation.</li>
+                              <li><b style="color:var(--text)">Modélisation & simulation</b> : construction d’un modèle thermique sous <b style="color:var(--text)">Matlab/Simulink</b>, simulation de scénarios et analyse de comportement.</li>
+                              <li><b style="color:var(--text)">Régulation</b> : conception/évaluation de stratégies (<b style="color:var(--text)">PID</b>, <b style="color:var(--text)">MPC</b>, et travaux de simulation avec contrôleur <b style="color:var(--text)">FLC</b> tel que structuré dans le rapport).</li>
+                              <li><b style="color:var(--text)">Validation</b> : essais, interprétation, ajustements et formalisation des protocoles.</li>
+                              <li>Contributions annexes : option <b style="color:var(--text)">gaufrage</b> (Epochief), comparatif <b style="color:var(--text)">bagues de broches</b> (ARNITE / acier / aluminium), contributions <b style="color:var(--text)">CIR/CII</b>.</li>
+                              <li>Travail en interface avec tuteur, bureau électrique/automatisme, techniciens et autres stagiaires.</li>
                             </ul>
                           </div>
 
@@ -336,10 +305,10 @@
                             <p style="margin:0; font-weight:800;">Résultats & livrables</p>
                             <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
                               <li>Modèle Simulink + jeux de simulation permettant de comparer plusieurs approches de régulation.</li>
-                              <li>Analyses comparatives (qualité de régulation, rejets de perturbations, recommandations de réglages).</li>
-                              <li>Rapports techniques structurés : hypothèses, méthode, résultats, limites, pistes d’amélioration.</li>
-                              <li>Dossiers et supports internes (dont éléments CIR/CII) documentant objectifs, méthodes et preuves techniques.</li>
-                              <li>Éléments d’aide à la décision sur le choix de composants / matériaux (comparatifs et critères de performance).</li>
+                              <li>Analyses comparatives et recommandations de réglages.</li>
+                              <li>Rapports techniques structurés (méthode, résultats, limites, pistes d’amélioration).</li>
+                              <li>Supports internes (dont éléments CIR/CII) documentant objectifs, méthode et preuves techniques.</li>
+                              <li>Aide à la décision sur choix composants / matériaux.</li>
                             </ul>
                           </div>
 
@@ -347,14 +316,6 @@
                             <p style="margin:0; font-weight:800;">Outils</p>
                             <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
                               Matlab/Simulink • Modélisation thermique • PID / MPC • Analyse de performance • Tests • Rédaction technique
-                            </p>
-                          </div>
-
-                          <div style="margin-top:12px;">
-                            <p style="margin:0; font-weight:800;">Ce que ça démontre</p>
-                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
-                              Capacité à passer d’un système industriel réel à un modèle exploitable, proposer/évaluer des lois de commande,
-                              structurer des essais, et livrer une documentation claire pour décision technique.
                             </p>
                           </div>
 
@@ -385,41 +346,28 @@
                           </p>
 
                           <p style="margin:8px 0 0 0; opacity:.9; color:var(--muted); line-height:1.6;">
-                            <b style="color:var(--text)">Contexte</b> : instrumentation d’un <b style="color:var(--text)">four rotatif</b> pour observer l’état machine via capteurs + plateforme / ordinateur industriel,
-                            avec objectif de fiabiliser le suivi et limiter les interventions terrain.
+                            <b style="color:var(--text)">Contexte</b> : instrumentation d’un <b style="color:var(--text)">four rotatif</b>
+                            via capteurs + plateforme / ordinateur industriel, avec objectif de fiabiliser le suivi et limiter les interventions terrain.
                           </p>
 
                           <div style="margin-top:12px;">
                             <p style="margin:0; font-weight:800;">Missions</p>
                             <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
-                              <li>
-                                Analyse du besoin : définition des grandeurs à mesurer, contraintes d’installation et conditions industrielles (robustesse, sécurité, accessibilité).
-                              </li>
-                              <li>
-                                Sélection et mise en œuvre de capteurs : installation/configuration (ex. <b style="color:var(--text)">inductifs</b>, <b style="color:var(--text)">ultrasons</b>, <b style="color:var(--text)">inclinomètres</b>),
-                                câblage/pose et vérification de la cohérence des mesures.
-                              </li>
-                              <li>
-                                Mise en place d’une chaîne de collecte : intégration sur plateforme/gateway industrielle, préparation des visualisations (dashboards).
-                              </li>
-                              <li>
-                                Traitement et exploitation sous <b style="color:var(--text)">Python</b> : nettoyage, extraction d’indicateurs, vérifications simples de cohérence.
-                              </li>
-                              <li>
-                                Tests sur site client et itérations : validation technique, ajustements, échanges avec équipes internes/clients.
-                              </li>
-                              <li>
-                                Documentation : rédaction de livrables de transfert (manuel utilisateur, rapport / recommandations, suivi d’avancement).
-                              </li>
+                              <li>Analyse du besoin : grandeurs à mesurer, contraintes d’installation et conditions industrielles.</li>
+                              <li>Sélection et mise en œuvre de capteurs : installation/configuration (inductifs, ultrasons, inclinomètres), vérification cohérence des mesures.</li>
+                              <li>Chaîne de collecte : intégration sur plateforme/gateway, préparation des visualisations (dashboards).</li>
+                              <li>Traitement/exploitation sous <b style="color:var(--text)">Python</b> : nettoyage, extraction d’indicateurs, vérifications de cohérence.</li>
+                              <li>Tests sur site client : validations, ajustements, échanges avec équipes internes/clients.</li>
+                              <li>Documentation : manuel utilisateur, rapport/recommandations, suivi d’avancement.</li>
                             </ul>
                           </div>
 
                           <div style="margin-top:12px;">
                             <p style="margin:0; font-weight:800;">Résultats & livrables</p>
                             <ul style="margin:8px 0 0 18px; padding:0; line-height:1.65; color:var(--muted);">
-                              <li>Chaîne d’instrumentation opérationnelle testée en conditions terrain (capteurs → plateforme → visualisation).</li>
-                              <li>Dashboards / vues de suivi facilitant l’interprétation des mesures par l’équipe.</li>
-                              <li>Scripts / traitements Python pour exploiter les acquisitions et produire des indicateurs simples.</li>
+                              <li>Chaîne d’instrumentation opérationnelle testée en conditions terrain.</li>
+                              <li>Vues de suivi facilitant l’interprétation des mesures.</li>
+                              <li>Traitements Python pour exploiter les acquisitions et produire des indicateurs.</li>
                               <li>Documents de transmission : manuel utilisateur, rapports de tests, recommandations techniques.</li>
                             </ul>
                           </div>
@@ -428,13 +376,6 @@
                             <p style="margin:0; font-weight:800;">Outils</p>
                             <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
                               Capteurs industriels • Instrumentation / acquisition • Plateforme/gateway • Dashboards • Python • Rédaction technique
-                            </p>
-                          </div>
-
-                          <div style="margin-top:12px;">
-                            <p style="margin:0; font-weight:800;">Ce que ça démontre</p>
-                            <p style="margin:8px 0 0 0; line-height:1.65; opacity:.95; color:var(--muted);">
-                              Capacité à instrumenter un système réel, fiabiliser une chaîne d’acquisition, valider sur site, et livrer une documentation utilisable par l’équipe.
                             </p>
                           </div>
 
@@ -447,7 +388,6 @@
 
             </tbody>
           </table>
-          <!-- /Bloc détaillé -->
         </div>
       </div>
     </section>
@@ -456,7 +396,7 @@
     <section id="projets">
       <div class="section-head">
         <h2>Projets techniques</h2>
-        <p>Projets principaux puis secondaires • preuves intégrées</p>
+        <!-- ✅ supprimé : "Projets principaux puis secondaires • preuves intégrées" -->
       </div>
 
       <div class="grid">
@@ -470,9 +410,7 @@
             <span class="pill">PDF + vidéo</span>
           </summary>
           <div class="body">
-            <p>
-              <b>Objectif</b> : concevoir et valider un robot quadrupède (approche projet industrielle, résultat démontrable).
-            </p>
+            <p><b>Objectif</b> : concevoir et valider un robot quadrupède (approche projet industrielle, résultat démontrable).</p>
             <ul class="bullets">
               <li><b>Contributions</b> (mécatronique) : prototypage, intégration, tests, documentation, coordination en équipe.</li>
               <li><b>Résultat</b> : marche démontrée (vidéo) + rapport complet consultable.</li>
@@ -484,10 +422,7 @@
             </div>
 
             <div class="pdf-wrap">
-              <iframe
-                src="Rapport-PLP23INT23-INSAdogo.pdf"
-                title="Rapport Robot Quadrupède - INSAdogo"
-                loading="lazy"></iframe>
+              <iframe src="Rapport-PLP23INT23-INSAdogo.pdf" title="Rapport Robot Quadrupède - INSAdogo" loading="lazy"></iframe>
             </div>
           </div>
         </details>
@@ -502,9 +437,7 @@
             <span class="pill">PDF (IEEE)</span>
           </summary>
           <div class="body">
-            <p>
-              <b>Objectif</b> : concevoir et valider un système d’allumage à distance, présenté de manière “projet industriel”.
-            </p>
+            <p><b>Objectif</b> : concevoir et valider un système d’allumage à distance, présenté de manière “projet industriel”.</p>
             <ul class="bullets">
               <li><b>Contributions</b> : prototypage, instrumentation, codage, tests, documentation et coordination en équipe.</li>
               <li><b>Preuve principale</b> : rapport IEEE consultable ci-dessous.</li>
@@ -515,10 +448,7 @@
             </div>
 
             <div class="pdf-wrap">
-              <iframe
-                src="Rapport_IEEE_projet.pdf"
-                title="Rapport IEEE - Système d’allumage à distance"
-                loading="lazy"></iframe>
+              <iframe src="Rapport_IEEE_projet.pdf" title="Rapport IEEE - Système d’allumage à distance" loading="lazy"></iframe>
             </div>
           </div>
         </details>
@@ -545,10 +475,7 @@
               <a class="btn" href="Rapport%20architecture%20des%20up.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe
-                src="Rapport%20architecture%20des%20up.pdf"
-                title="Rapport architecture des up"
-                loading="lazy"></iframe>
+              <iframe src="Rapport%20architecture%20des%20up.pdf" title="Rapport architecture des up" loading="lazy"></iframe>
             </div>
           </div>
         </details>
@@ -568,10 +495,7 @@
               <a class="btn" href="Mise%20en%20%C5%93uvre%20DSP.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe
-                src="Mise%20en%20%C5%93uvre%20DSP.pdf"
-                title="Mise en œuvre DSP"
-                loading="lazy"></iframe>
+              <iframe src="Mise%20en%20%C5%93uvre%20DSP.pdf" title="Mise en œuvre DSP" loading="lazy"></iframe>
             </div>
           </div>
         </details>
@@ -591,10 +515,7 @@
               <a class="btn" href="RAPPORT%20Servom%C3%A9canisme.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe
-                src="RAPPORT%20Servom%C3%A9canisme.pdf"
-                title="RAPPORT Servomécanisme"
-                loading="lazy"></iframe>
+              <iframe src="RAPPORT%20Servom%C3%A9canisme.pdf" title="RAPPORT Servomécanisme" loading="lazy"></iframe>
             </div>
           </div>
         </details>
@@ -605,23 +526,36 @@
     <section id="competences">
       <div class="section-head">
         <h2>Compétences</h2>
-        <p>+ notion ferroviaire intégrée ici (comme demandé)</p>
+        <p>Compétences techniques, ferroviaires et habilitations TES</p>
       </div>
 
       <div class="card">
         <div class="inner">
           <ul class="bullets" style="margin-top:0">
             <li><b>Automatisme & contrôle-commande</b> : CEI 61131-3 (Ladder, FBD, ST), PID/MPC, Matlab/Simulink.</li>
-            <li><b>Instrumentation</b> : capteurs industriels, intégration, mise en service, validation terrain.</li>
+            <li><b>Instrumentation</b> : capteurs industriels, intégration, mise en service, validation terrain, rédaction de livrables.</li>
             <li><b>Systèmes industriels</b> : analyse fonctionnelle, documentation, tests, rigueur d’exécution.</li>
             <li><b>Systèmes embarqués / prototypage</b> : Arduino / ESP, C/C++, Python (selon besoin).</li>
             <li><b>Support gestion de projet</b> : organisation, coordination équipe, suivi d’avancement, livrables.</li>
-            <li><b>Connaissances ferroviaires</b> : bases et environnement ferroviaire (développement, logique, exigences).</li>
           </ul>
 
-          <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:13.5px;">
-            <b>Habilitations</b> (à placer ici également, comme demandé) : TES physique / TES psychologique (détails à compléter si besoin).
+          <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
+            <p style="margin:0; font-weight:800;">Compétences ferroviaires</p>
+            <ul class="bullets" style="margin-top:8px">
+              <li>Compréhension des environnements ferroviaires (culture sécurité, exigences, cycles de validation).</li>
+              <li>Connaissances des logiques de contrôle-commande et de l’approche “système” (interfaces, vérification, traçabilité).</li>
+              <li>Vocabulaire et repères métiers permettant d’échanger efficacement avec équipes ingénierie/essais/maintenance.</li>
+            </ul>
           </div>
+
+          <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
+            <p style="margin:0; font-weight:800;">Habilitations TES (Tâches Essentielles de Sécurité)</p>
+            <ul class="bullets" style="margin-top:8px">
+              <li><b>Certificat d’aptitude physique TES</b> : atteste l’aptitude médicale/physique à exercer des tâches essentielles de sécurité ferroviaire (hors conduite) jusqu’en <b>2030</b>.</li>
+              <li><b>Certificat d’aptitude psychologique TES</b> : atteste l’aptitude psychologique à exercer des tâches essentielles de sécurité (vigilance, gestion du stress, respect des règles, capacité à travailler en environnement contraint).</li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </section>
@@ -638,7 +572,11 @@
           <div class="meta" style="border-top:0; margin-top:0; padding-top:0">
             <div><b>Téléphone</b> : <a href="tel:+33610259457">+33 6 10 25 94 57</a></div>
             <div><b>Email</b> : <a href="mailto:bambatoure0702@gmail.com">bambatoure0702@gmail.com</a></div>
-            <div><b>Liens</b> : <a href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://bambatoure0702-max.github.io/" target="_blank" rel="noopener">GitHub Pages</a></div>
+            <div><b>Liens</b> :
+              <a href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noopener">LinkedIn</a>
+              •
+              <a href="https://bambatoure0702-max.github.io/" target="_blank" rel="noopener">GitHub Pages</a>
+            </div>
           </div>
         </div>
       </div>

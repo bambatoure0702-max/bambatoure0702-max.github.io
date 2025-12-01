@@ -110,7 +110,7 @@
     }
     summary::-webkit-details-marker{display:none}
     .sum-left{display:flex; flex-direction:column; gap:4px}
-    .sum-title{font-weight:800; font-size:14.5px} /* fix 850 -> 800 */
+    .sum-title{font-weight:800; font-size:14.5px}
     .sum-sub{color:var(--muted); font-size:12.5px}
     .pill{
       font-size:11.5px; color:rgba(231,238,248,.86);
@@ -155,7 +155,7 @@
     code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
   </style>
 
-  <!-- favicon (fix: no extra quote) -->
+  <!-- favicon (safe encoding) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
 </head>
 
@@ -463,8 +463,8 @@
 
       <div class="grid">
 
-        <!-- Secondary 1 -->
-        <details data-pdf="Rapport-architecture-des-up.pdf">
+        <!-- Secondary 1 (IMPORTANT: points to GitHub Pages PDF name, not github blob) -->
+        <details data-pdf="Rapport%20architecture%20des%20up.pdf">
           <summary>
             <div class="sum-left">
               <div class="sum-title">Architecture des UP</div>
@@ -474,7 +474,8 @@
           </summary>
           <div class="body">
             <p>
-              <b>Description</b> : rapport de synthèse et d’architecture (blocs, rôles, échanges) pour rendre un système lisible et traçable.
+              <b>Résumé</b> : j’ai structuré l’architecture d’un système (blocs, rôles, échanges) pour rendre la lecture claire,
+              faciliter la traçabilité, et permettre des échanges efficaces entre conception, intégration et test.
             </p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
@@ -485,7 +486,7 @@
           </div>
         </details>
 
-        <!-- Secondary 2 -->
+        <!-- Secondary 2 (celui-ci fonctionne déjà chez toi) -->
         <details data-pdf="Mise-en-oeuvre-dsp.pdf">
           <summary>
             <div class="sum-left">
@@ -496,7 +497,8 @@
           </summary>
           <div class="body">
             <p>
-              <b>Description</b> : étude et mise en œuvre d’un traitement numérique du signal (DSP) avec une démarche structurée (hypothèses, étapes, résultats).
+              <b>Résumé</b> : étude et mise en œuvre d’un traitement numérique du signal (DSP) avec une démarche complète :
+              compréhension, implémentation, tests et validation des résultats.
             </p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
@@ -507,8 +509,8 @@
           </div>
         </details>
 
-        <!-- Secondary 3 -->
-        <details data-pdf="Rapport-servomecanisme.pdf">
+        <!-- Secondary 3 (IMPORTANT: keeps the exact %CC%81 encoding of your real filename) -->
+        <details data-pdf="RAPPORT%20Servome%CC%81canisme.pdf">
           <summary>
             <div class="sum-left">
               <div class="sum-title">Servomécanisme</div>
@@ -518,7 +520,8 @@
           </summary>
           <div class="body">
             <p>
-              <b>Description</b> : étude d’un servomécanisme (dimensionnement, performances attendues, validations/simulations) dans une logique contrôle-commande.
+              <b>Résumé</b> : analyse d’un servomécanisme (logique contrôle-commande et performances), avec une restitution structurée
+              et des éléments de validation/dimensionnement selon le cadre du rapport.
             </p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
@@ -581,7 +584,7 @@
         <div class="inner">
           <div class="meta" style="border-top:0; margin-top:0; padding-top:0">
             <div><b>Téléphone</b> : <a href="tel:+33610259457">+33 6 10 25 94 57</a></div>
-            <div><b>Email</b> : <a href="mailto:bambv0702@gmail.com">bambv0702@gmail.com</a></div>
+            <div><b>Email</b> : <a href="mailto:bambatoure0702@gmail.com">bambatoure0702@gmail.com</a></div>
             <div><b>Liens</b> :
               <a href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noopener">LinkedIn</a>
               •

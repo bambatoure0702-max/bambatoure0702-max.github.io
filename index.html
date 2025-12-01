@@ -141,9 +141,13 @@
       color:var(--muted); font-size:12.5px;
       display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
     }
+
+    /* ✅ KPI GRID: 6 cases (3 colonnes desktop) */
     .kpi{
-      display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;
+      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px;
     }
+    @media (max-width:900px){ .kpi{grid-template-columns:repeat(2, minmax(0,1fr));} }
+
     .mini{
       border:1px solid var(--line);
       background:rgba(255,255,255,.02);
@@ -155,7 +159,6 @@
     code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
   </style>
 
-  <!-- favicon (safe encoding) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
 </head>
 
@@ -166,7 +169,7 @@
     <div class="topbar-inner">
       <div class="brand">
         <div class="name">Mouhamadou Bamba TOURE</div>
-        <div class="tag">Ingénieur Mécatronique, Contrôle Commande, Système Industriel • <span style="color:rgba(124,241,214,.85)">Industrie</span> • <span style="color:rgba(74,163,255,.85)">Énergie</span> • Ferroviaire</div>
+        <div class="tag">Ingénieur mécatronique — contrôle-commande, instrumentation & systèmes industriels • <span style="color:rgba(124,241,214,.85)">Industrie</span> • <span style="color:rgba(74,163,255,.85)">Énergie</span> • Ferroviaire</div>
       </div>
       <div class="nav">
         <a href="#apropos">À propos</a>
@@ -183,10 +186,11 @@
     <div class="hero">
       <div class="card">
         <div class="inner">
-          <h1 class="title">Portfolio — ingénierie terrain & systèmes industriels</h1>
+          <h1 class="title">Portfolio — mécatronique, contrôle-commande & systèmes industriels</h1>
           <p class="subtitle">
-            Ingénieur généraliste en mécatronique : automatisme, instrumentation, prototypage et validation.
-            Objectif : présenter clairement mes réalisations, mes méthodes et des preuves (rapports) consultables directement sur le site.
+            Ingénieur mécatronique, j’interviens sur des sujets de contrôle-commande, instrumentation et intégration de systèmes.<br>
+            J’aime les projets concrets qui demandent rigueur, méthode et coordination avec les équipes (bureau d’études, automaticiens, techniciens).<br>
+            Je peux également contribuer au suivi projet (organisation, coordination, reporting) en support des activités techniques.
           </p>
 
           <div class="chips">
@@ -220,21 +224,30 @@
           <div class="kpi">
             <div class="mini">
               <p class="h">Axes</p>
-              <p class="v">Automatisme • Instrumentation</p>
+              <p class="v">Contrôle-commande • Instrumentation</p>
             </div>
             <div class="mini">
               <p class="h">Méthode</p>
-              <p class="v">Mission → Outils → Résultats</p>
+              <p class="v">Analyse → Implémentation → Tests</p>
             </div>
             <div class="mini">
-              <p class="h">Projets (preuve)</p>
+              <p class="h">Preuves</p>
               <p class="v">Rapports PDF intégrés</p>
             </div>
             <div class="mini">
               <p class="h">Qualités</p>
-              <p class="v">Rigueur • Adaptation • Équipe</p>
+              <p class="v">Rigueur • Autonomie • Équipe</p>
+            </div>
+            <div class="mini">
+              <p class="h">Ce que je prends en charge</p>
+              <p class="v">Intégration • Tests • Validation</p>
+            </div>
+            <div class="mini">
+              <p class="h">Environnements</p>
+              <p class="v">Terrain • Industriel • Contraint</p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -401,7 +414,6 @@
       </div>
 
       <div class="grid">
-        <!-- Projet principal 1 -->
         <details open>
           <summary>
             <div class="sum-left">
@@ -411,10 +423,10 @@
             <span class="pill">PDF + vidéo</span>
           </summary>
           <div class="body">
-            <p><b>Objectif</b> : concevoir et valider un robot quadrupède (approche projet industrielle, résultat démontrable).</p>
+            <p><b>Objectif</b> : concevoir et valider un robot quadrupède, de la conception à l’intégration, avec tests de fonctionnement et documentation.</p>
             <ul class="bullets">
-              <li><b>Contributions</b> (mécatronique) : prototypage, intégration, tests, documentation, coordination en équipe.</li>
-              <li><b>Résultat</b> : marche démontrée (vidéo) + rapport complet consultable.</li>
+              <li><b>Contributions</b> : prototypage, intégration mécatronique, essais, analyse des résultats, rédaction/structuration du rapport, travail en équipe.</li>
+              <li><b>Résultat</b> : démonstration fonctionnelle (vidéo) + rapport complet.</li>
             </ul>
 
             <div class="proofs">
@@ -428,7 +440,6 @@
           </div>
         </details>
 
-        <!-- Projet principal 2 -->
         <details open>
           <summary>
             <div class="sum-left">
@@ -438,10 +449,10 @@
             <span class="pill">PDF (IEEE)</span>
           </summary>
           <div class="body">
-            <p><b>Objectif</b> : concevoir et valider un système d’allumage à distance, présenté de manière “projet industriel”.</p>
+            <p><b>Objectif</b> : réaliser un système d’allumage à distance, avec intégration, tests et documentation au format projet.</p>
             <ul class="bullets">
-              <li><b>Contributions</b> : prototypage, instrumentation, codage, tests, documentation et coordination en équipe.</li>
-              <li><b>Preuve principale</b> : rapport IEEE consultable ci-dessous.</li>
+              <li><b>Contributions</b> : prototypage, câblage/intégration, tests, documentation, coordination.</li>
+              <li><b>Preuve</b> : rapport IEEE consultable.</li>
             </ul>
 
             <div class="proofs">
@@ -455,15 +466,12 @@
         </details>
       </div>
 
-      <!-- Projets secondaires -->
       <div class="section-head" style="margin-top:22px">
         <h2>Projets secondaires</h2>
         <p>Mini-résumé + viewer PDF (un lien par projet)</p>
       </div>
 
       <div class="grid">
-
-        <!-- Secondary 1 (IMPORTANT: points to GitHub Pages PDF name, not github blob) -->
         <details data-pdf="Rapport%20architecture%20des%20up.pdf">
           <summary>
             <div class="sum-left">
@@ -473,10 +481,7 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>
-              <b>Résumé</b> : j’ai structuré l’architecture d’un système (blocs, rôles, échanges) pour rendre la lecture claire,
-              faciliter la traçabilité, et permettre des échanges efficaces entre conception, intégration et test.
-            </p>
+            <p><b>Résumé</b> : formalisation d’une architecture (blocs, rôles, interfaces) pour rendre un système clair, traçable et exploitable par l’équipe.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
@@ -486,7 +491,6 @@
           </div>
         </details>
 
-        <!-- Secondary 2 (celui-ci fonctionne déjà chez toi) -->
         <details data-pdf="Mise-en-oeuvre-dsp.pdf">
           <summary>
             <div class="sum-left">
@@ -496,10 +500,7 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>
-              <b>Résumé</b> : étude et mise en œuvre d’un traitement numérique du signal (DSP) avec une démarche complète :
-              compréhension, implémentation, tests et validation des résultats.
-            </p>
+            <p><b>Résumé</b> : étude et implémentation d’un traitement numérique du signal avec une démarche complète : conception, codage, tests et validation.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
@@ -509,7 +510,6 @@
           </div>
         </details>
 
-        <!-- Secondary 3 (IMPORTANT: keeps the exact %CC%81 encoding of your real filename) -->
         <details data-pdf="RAPPORT%20Servome%CC%81canisme.pdf">
           <summary>
             <div class="sum-left">
@@ -519,10 +519,7 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>
-              <b>Résumé</b> : analyse d’un servomécanisme (logique contrôle-commande et performances), avec une restitution structurée
-              et des éléments de validation/dimensionnement selon le cadre du rapport.
-            </p>
+            <p><b>Résumé</b> : étude d’un servomécanisme avec dimensionnement, vérifications de performance et éléments de validation selon le rapport.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
@@ -531,7 +528,6 @@
             </div>
           </div>
         </details>
-
       </div>
     </section>
 
@@ -545,27 +541,27 @@
       <div class="card">
         <div class="inner">
           <ul class="bullets" style="margin-top:0">
-            <li><b>Automatisme & contrôle-commande</b> : CEI 61131-3 (Ladder, FBD, ST), PID/MPC, Matlab/Simulink.</li>
+            <li><b>Automatisme & contrôle-commande</b> : notions CEI 61131-3 (Ladder, FBD, ST), logique câblée, PID/MPC, Matlab/Simulink.</li>
             <li><b>Instrumentation</b> : capteurs industriels, intégration, mise en service, validation terrain, rédaction de livrables.</li>
             <li><b>Systèmes industriels</b> : analyse fonctionnelle, documentation, tests, rigueur d’exécution.</li>
-            <li><b>Systèmes embarqués / prototypage</b> : Arduino / ESP, C/C++, Python (selon besoin).</li>
+            <li><b>Systèmes embarqués / prototypage</b> : Arduino / ESP, C/C++, Python (scripts/tests).</li>
             <li><b>Support gestion de projet</b> : organisation, coordination équipe, suivi d’avancement, livrables.</li>
           </ul>
 
           <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
             <p style="margin:0; font-weight:800;">Compétences ferroviaires</p>
             <ul class="bullets" style="margin-top:8px">
-              <li>Compréhension des environnements ferroviaires (culture sécurité, exigences, cycles de validation).</li>
-              <li>Connaissances des logiques de contrôle-commande et de l’approche “système” (interfaces, vérification, traçabilité).</li>
-              <li>Vocabulaire et repères métiers permettant d’échanger efficacement avec équipes ingénierie/essais/maintenance.</li>
+              <li>Culture sécurité et rigueur documentaire.</li>
+              <li>Approche système : interfaces, vérification, traçabilité.</li>
+              <li>Compréhension des environnements maintenance / essais / exploitation.</li>
             </ul>
           </div>
 
           <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
             <p style="margin:0; font-weight:800;">Habilitations TES (Tâches Essentielles de Sécurité)</p>
             <ul class="bullets" style="margin-top:8px">
-              <li><b>Certificat d’aptitude physique TES</b> : atteste l’aptitude médicale/physique à exercer des tâches essentielles de sécurité ferroviaire (hors conduite) jusqu’en <b>2030</b>.</li>
-              <li><b>Certificat d’aptitude psychologique TES</b> : atteste l’aptitude psychologique à exercer des tâches essentielles de sécurité (vigilance, gestion du stress, respect des règles, capacité à travailler en environnement contraint).</li>
+              <li><b>Aptitude physique TES</b> : aptitude médicale/physique pour exercer des tâches essentielles de sécurité ferroviaire (hors conduite) — validité : <b>2030</b>.</li>
+              <li><b>Aptitude psychologique TES</b> : vigilance, gestion du stress, respect strict des procédures, travail en environnement contraint.</li>
             </ul>
           </div>
 

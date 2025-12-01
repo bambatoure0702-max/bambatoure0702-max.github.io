@@ -10,15 +10,16 @@
 
   <style>
     :root{
-      --bg:#0b0f14;
-      --panel:#0f1620;
-      --panel2:#0c121b;
-      --text:#e7eef8;
-      --muted:#a9b7c8;
-      --line:rgba(231,238,248,.12);
-      --accent:#4aa3ff;
-      --accent2:#7cf1d6;
-      --shadow: 0 12px 40px rgba(0,0,0,.45);
+      /* ✅ Thème clair (page blanche) */
+      --bg:#ffffff;
+      --panel:#f7f9fc;
+      --panel2:#ffffff;
+      --text:#0b1220;
+      --muted:#526074;
+      --line:rgba(11,18,32,.14);
+      --accent:#1769ff;
+      --accent2:#0aa27a;
+      --shadow: 0 12px 40px rgba(10, 20, 40, .10);
       --radius:18px;
     }
     *{box-sizing:border-box}
@@ -28,7 +29,7 @@
     .wrap{max-width:1080px; margin:0 auto; padding:28px 18px 60px;}
     .topbar{
       position:sticky; top:0; z-index:50;
-      background:rgba(11,15,20,.78);
+      background:rgba(255,255,255,.82);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -41,14 +42,14 @@
       font-size:13px; color:var(--muted);
       padding:8px 10px; border-radius:999px; border:1px solid transparent;
     }
-    .nav a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03)}
+    .nav a:hover{color:var(--text); border-color:var(--line); background:rgba(0,0,0,.03)}
     .hero{
       margin-top:22px;
       display:grid; grid-template-columns:1.22fr .78fr; gap:16px;
     }
     @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
     .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      background:linear-gradient(180deg, rgba(255,255,255,1), rgba(247,249,252,1));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow: var(--shadow);
@@ -64,10 +65,10 @@
     }
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
     .chip{
-      font-size:12px; color:rgba(231,238,248,.92);
+      font-size:12px; color:rgba(11,18,32,.92);
       padding:6px 10px; border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+      background:rgba(0,0,0,.02);
     }
     .meta{
       display:flex; flex-direction:column; gap:10px;
@@ -83,12 +84,12 @@
       display:inline-flex; align-items:center; gap:8px;
       padding:10px 12px; border-radius:12px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+      background:rgba(0,0,0,.02);
       color:var(--text); font-size:13px;
       transition: transform .08s ease;
     }
-    .btn:hover{border-color:rgba(74,163,255,.35); background:rgba(74,163,255,.08); transform: translateY(-1px);}
-    .btn.secondary:hover{border-color:rgba(124,241,214,.35); background:rgba(124,241,214,.07)}
+    .btn:hover{border-color:rgba(23,105,255,.35); background:rgba(23,105,255,.08); transform: translateY(-1px);}
+    .btn.secondary:hover{border-color:rgba(10,162,122,.35); background:rgba(10,162,122,.07)}
     section{margin-top:22px}
     .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin:26px 0 12px}
     .section-head h2{margin:0; font-size:18px; letter-spacing:.2px}
@@ -98,10 +99,11 @@
     }
     @media (max-width:900px){ .grid{grid-template-columns:1fr;} }
     details{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      background:linear-gradient(180deg, rgba(255,255,255,1), rgba(247,249,252,1));
       border:1px solid var(--line);
       border-radius:var(--radius);
       overflow:hidden;
+      box-shadow: var(--shadow);
     }
     summary{
       list-style:none; cursor:pointer;
@@ -113,10 +115,10 @@
     .sum-title{font-weight:800; font-size:14.5px}
     .sum-sub{color:var(--muted); font-size:12.5px}
     .pill{
-      font-size:11.5px; color:rgba(231,238,248,.86);
+      font-size:11.5px; color:rgba(11,18,32,.86);
       padding:6px 9px; border-radius:999px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+      background:rgba(0,0,0,.02);
       white-space:nowrap;
     }
     .body{padding:0 16px 16px 16px; border-top:1px solid var(--line);}
@@ -143,13 +145,10 @@
     }
 
     /* ✅ KPI simple (2 colonnes) */
-    .kpi{
-      display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;
-    }
-
+    .kpi{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;}
     .mini{
       border:1px solid var(--line);
-      background:rgba(255,255,255,.02);
+      background:rgba(0,0,0,.02);
       border-radius:16px;
       padding:12px;
     }
@@ -168,7 +167,7 @@
     <div class="topbar-inner">
       <div class="brand">
         <div class="name">Mouhamadou Bamba TOURE</div>
-        <div class="tag">Ingénieur mécatronique — contrôle-commande, instrumentation & systèmes industriels • <span style="color:rgba(124,241,214,.85)">Industrie</span> • <span style="color:rgba(74,163,255,.85)">Énergie</span> • Ferroviaire</div>
+        <div class="tag">Ingénieur mécatronique — contrôle-commande, instrumentation & systèmes industriels • <span style="color:rgba(10,162,122,.95)">Industrie</span> • <span style="color:rgba(23,105,255,.95)">Énergie</span> • Ferroviaire</div>
       </div>
       <div class="nav">
         <a href="#apropos">À propos</a>
@@ -187,7 +186,7 @@
         <div class="inner">
           <h1 class="title">Portfolio — mécatronique, contrôle-commande & systèmes industriels</h1>
           <p class="subtitle">
-            Ingénieur mécatronique  : contrôle-commande, instrumentation, intégration de systèmes et tests/validation.<br>
+            Ingénieur mécatronique : contrôle-commande, instrumentation, intégration de systèmes et tests/validation.<br>
             Le site regroupe mes expériences professionnelles et mes projets, avec des rapports PDF consultables.
           </p>
 
@@ -222,19 +221,19 @@
           <div class="kpi">
             <div class="mini">
               <p class="h">Domaines</p>
-              <p class="v">Contrôle-commande • Instrumentation  • Gestion de projet </p>
+              <p class="v">Contrôle-commande • Instrumentation • Gestion de projet</p>
             </div>
             <div class="mini">
-              <p class="h">Secteurs </p>
+              <p class="h">Secteurs</p>
               <p class="v">Industrie • Énergie • Ferroviaire</p>
             </div>
             <div class="mini">
-              <p class="h">Compétences </p>
+              <p class="h">Compétences</p>
               <p class="v">Rigueur • Polyvalence • Travail en équipe</p>
             </div>
             <div class="mini">
               <p class="h">Sur le site</p>
-              <p class="v">Expériences • Projets • Livrables </p>
+              <p class="v">Expériences • Projets • Livrables</p>
             </div>
           </div>
 
@@ -252,8 +251,8 @@
         <div class="inner">
           <p style="margin:0; color:var(--muted); line-height:1.65">
             Ingénieur en mécatronique avec une culture industrielle et une approche structurée du travail.
-  Habitué aux environnements terrain, aux contraintes de qualité et à la documentation technique.
-  À l’aise dans la coordination avec bureau d’études, fournisseurs et techniciens, avec un focus sur la fiabilité, la traçabilité et la clarté des livrables.
+            Habitué aux environnements terrain, aux contraintes de qualité et à la documentation technique.
+            À l’aise dans la coordination avec bureau d’études, fournisseurs et techniciens, avec un focus sur la fiabilité, la traçabilité et la clarté des livrables.
           </p>
         </div>
       </div>
@@ -272,7 +271,7 @@
 
               <!-- DCM ATN -->
               <tr>
-                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.01);">
+                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(0,0,0,.01);">
                   <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;">
                     <tbody>
                       <tr>
@@ -334,7 +333,7 @@
 
               <!-- FIVES FCB -->
               <tr>
-                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.01);">
+                <td style="padding:18px; width:100%; vertical-align:top; border:1px solid var(--line); border-radius:14px; background:rgba(0,0,0,.01);">
                   <table style="width:100%; border:0; border-spacing:0; border-collapse:separate;">
                     <tbody>
                       <tr>
@@ -412,10 +411,10 @@
             <span class="pill">PDF + vidéo</span>
           </summary>
           <div class="body">
-            <p><b>Objectif</b> : concevoir et valider un robot quadrupède, de la conception à l’intégration, avec tests de fonctionnement et documentation.</p>
+            <p><b>Objectif</b> : concevoir, intégrer et valider un robot quadrupède, avec une démarche complète (exigences, intégration, essais et documentation).</p>
             <ul class="bullets">
-              <li><b>Contributions</b> : prototypage, intégration mécatronique, essais, analyse des résultats, rédaction/structuration du rapport, travail en équipe.</li>
-              <li><b>Résultat</b> : démonstration fonctionnelle (vidéo) + rapport complet.</li>
+              <li><b>Contributions</b> : prototypage et intégration mécatronique, campagnes d’essais, analyse des résultats, rédaction du rapport et coordination avec l’équipe projet.</li>
+              <li><b>Résultat</b> : démonstration fonctionnelle (vidéo) et dossier technique (rapport) consultable.</li>
             </ul>
 
             <div class="proofs">
@@ -438,10 +437,10 @@
             <span class="pill">PDF (IEEE)</span>
           </summary>
           <div class="body">
-            <p><b>Objectif</b> : réaliser un système d’allumage à distance, avec intégration, tests et documentation au format projet.</p>
+            <p><b>Objectif</b> : développer un système d’allumage à distance, en couvrant l’intégration, les essais et la formalisation des livrables.</p>
             <ul class="bullets">
-              <li><b>Contributions</b> : prototypage, câblage/intégration, tests, documentation, coordination.</li>
-              <li><b>Preuve</b> : rapport IEEE consultable.</li>
+              <li><b>Contributions</b> : prototypage, câblage et intégration, plan de tests/essais, rédaction de la documentation et coordination en équipe.</li>
+              <li><b>Livrable</b> : rapport IEEE consultable (format projet).</li>
             </ul>
 
             <div class="proofs">
@@ -465,12 +464,12 @@
           <summary>
             <div class="sum-left">
               <div class="sum-title">Architecture des UP</div>
-              <div class="sum-sub">Documentation technique </div>
+              <div class="sum-sub">Documentation technique</div>
             </div>
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p><b>Résumé</b> : formalisation d’une architecture (blocs, rôles, interfaces) pour rendre un système clair, traçable et exploitable par l’équipe.</p>
+            <p><b>Résumé</b> : structuration d’une architecture système (blocs, fonctions, interfaces) afin de clarifier le périmètre, faciliter la compréhension et assurer une documentation exploitable.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
@@ -484,12 +483,12 @@
           <summary>
             <div class="sum-left">
               <div class="sum-title">Mise en œuvre DSP</div>
-              <div class="sum-sub">Implémentation / étude </div>
+              <div class="sum-sub">Implémentation / étude</div>
             </div>
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p><b>Résumé</b> : étude et implémentation d’un traitement numérique du signal avec une démarche complète : conception, codage, tests et validation.</p>
+            <p><b>Résumé</b> : mise en œuvre d’une chaîne de traitement numérique du signal, de la conception au codage, avec tests et vérifications des résultats.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
@@ -508,7 +507,7 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p><b>Résumé</b> : étude d’un servomécanisme avec dimensionnement, vérifications de performance et éléments de validation selon le rapport.</p>
+            <p><b>Résumé</b> : analyse d’un servomécanisme (modélisation, performances, stabilité) avec vérifications et éléments de validation présentés dans le rapport.</p>
             <div class="proofs">
               <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>

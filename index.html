@@ -6,7 +6,7 @@
 
   <meta name="author" content="Mouhamadou Bamba Touré">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio de Mouhamadou Bamba Touré — ingénieur mécatronique : contrôle-commande, instrumentation, tests/validation, systèmes industriels, ferroviaire.">
+  <meta name="description" content="Portfolio de Mouhamadou Bamba Touré — ingénieur mécatronique : contrôle-commande, instrumentation, intégration, tests/validation, systèmes industriels, ferroviaire.">
 
   <style>
     :root{
@@ -142,11 +142,10 @@
       display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
     }
 
-    /* ✅ KPI GRID: 6 cases (3 colonnes desktop) */
+    /* ✅ KPI simple (2 colonnes) */
     .kpi{
-      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px;
+      display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;
     }
-    @media (max-width:900px){ .kpi{grid-template-columns:repeat(2, minmax(0,1fr));} }
 
     .mini{
       border:1px solid var(--line);
@@ -188,9 +187,8 @@
         <div class="inner">
           <h1 class="title">Portfolio — mécatronique, contrôle-commande & systèmes industriels</h1>
           <p class="subtitle">
-            Ingénieur mécatronique, j’interviens sur des sujets de contrôle-commande, instrumentation et intégration de systèmes.<br>
-            J’aime les projets concrets qui demandent rigueur, méthode et coordination avec les équipes (bureau d’études, automaticiens, techniciens).<br>
-            Je peux également contribuer au suivi projet (organisation, coordination, reporting) en support des activités techniques.
+            Ingénieur mécatronique orienté terrain : contrôle-commande, instrumentation, intégration de systèmes et tests/validation.<br>
+            Le site regroupe mes expériences professionnelles et mes projets, avec des rapports PDF consultables.
           </p>
 
           <div class="chips">
@@ -218,33 +216,25 @@
         <div class="inner">
           <div class="section-head" style="margin:0 0 10px">
             <h2 style="margin:0">Vue rapide</h2>
-            <p>Factuel & lisible</p>
+            <p>Contenu du site</p>
           </div>
 
           <div class="kpi">
             <div class="mini">
-              <p class="h">Axes</p>
+              <p class="h">Domaines</p>
               <p class="v">Contrôle-commande • Instrumentation</p>
             </div>
             <div class="mini">
-              <p class="h">Méthode</p>
-              <p class="v">Analyse → Implémentation → Tests</p>
+              <p class="h">Secteurs visés</p>
+              <p class="v">Industrie • Énergie • Ferroviaire</p>
             </div>
             <div class="mini">
-              <p class="h">Preuves</p>
-              <p class="v">Rapports PDF intégrés</p>
+              <p class="h">Compétences clés</p>
+              <p class="v">Rigueur • Méthode • Équipe</p>
             </div>
             <div class="mini">
-              <p class="h">Qualités</p>
-              <p class="v">Rigueur • Autonomie • Équipe</p>
-            </div>
-            <div class="mini">
-              <p class="h">Ce que je prends en charge</p>
-              <p class="v">Intégration • Tests • Validation</p>
-            </div>
-            <div class="mini">
-              <p class="h">Environnements</p>
-              <p class="v">Terrain • Industriel • Contraint</p>
+              <p class="h">Sur le site</p>
+              <p class="v">Expériences • Projets • PDFs</p>
             </div>
           </div>
 
@@ -261,10 +251,9 @@
       <div class="card">
         <div class="inner">
           <p style="margin:0; color:var(--muted); line-height:1.65">
-            Je suis un ingénieur en mécatronique, à l’aise dans des environnements industriels variés.
-            J’interviens sur des sujets de contrôle-commande, instrumentation, prototypage et validation.
-            J’apprécie les projets concrets où il faut être rigoureux, s’adapter rapidement et travailler en équipe.
-            Je peux contribuer en support à la gestion de projet (organisation, coordination, suivi) sans que ce soit l’axe central.
+            Ingénieur en mécatronique, à l’aise dans des environnements industriels variés.
+            Une approche centrée sur l’analyse, l’intégration et la validation : compréhension du besoin, mise en œuvre, tests et documentation.
+            Habitué à travailler en coordination avec bureau d’études, automaticiens et techniciens, avec une attention forte à la qualité et à la traçabilité.
           </p>
         </div>
       </div>
@@ -468,7 +457,7 @@
 
       <div class="section-head" style="margin-top:22px">
         <h2>Projets secondaires</h2>
-        <p>Mini-résumé + viewer PDF (un lien par projet)</p>
+        <p>Rapports PDF consultables</p>
       </div>
 
       <div class="grid">
@@ -600,7 +589,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Auto: synchronise bouton + iframe à partir de data-pdf (évite les erreurs de lien)
+    // Auto: synchronise bouton + iframe à partir de data-pdf
     document.querySelectorAll("details[data-pdf]").forEach((box) => {
       const pdf = box.getAttribute("data-pdf");
       const a = box.querySelector("[data-openpdf]");

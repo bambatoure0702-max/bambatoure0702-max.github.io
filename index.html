@@ -6,6 +6,7 @@
 
   <meta name="author" content="Mouhamadou Bamba Touré">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Mouhamadou Bamba Touré — ingénieur mécatronique : contrôle-commande, instrumentation, tests/validation, systèmes industriels, ferroviaire.">
 
   <style>
     :root{
@@ -109,7 +110,7 @@
     }
     summary::-webkit-details-marker{display:none}
     .sum-left{display:flex; flex-direction:column; gap:4px}
-    .sum-title{font-weight:850; font-size:14.5px}
+    .sum-title{font-weight:800; font-size:14.5px} /* fix 850 -> 800 */
     .sum-sub{color:var(--muted); font-size:12.5px}
     .pill{
       font-size:11.5px; color:rgba(231,238,248,.86);
@@ -154,7 +155,8 @@
     code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
   </style>
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+  <!-- favicon (fix: no extra quote) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
 </head>
 
 <body>
@@ -396,7 +398,6 @@
     <section id="projets">
       <div class="section-head">
         <h2>Projets techniques</h2>
-        <!-- ✅ supprimé : "Projets principaux puis secondaires • preuves intégrées" -->
       </div>
 
       <div class="grid">
@@ -454,14 +455,16 @@
         </details>
       </div>
 
+      <!-- Projets secondaires -->
       <div class="section-head" style="margin-top:22px">
         <h2>Projets secondaires</h2>
         <p>Mini-résumé + viewer PDF (un lien par projet)</p>
       </div>
 
       <div class="grid">
+
         <!-- Secondary 1 -->
-        <details>
+        <details data-pdf="Rapport-architecture-des-up.pdf">
           <summary>
             <div class="sum-left">
               <div class="sum-title">Architecture des UP</div>
@@ -470,18 +473,20 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>Rapport disponible via le viewer intégré ci-dessous.</p>
+            <p>
+              <b>Description</b> : rapport de synthèse et d’architecture (blocs, rôles, échanges) pour rendre un système lisible et traçable.
+            </p>
             <div class="proofs">
-              <a class="btn" href="Rapport%20architecture%20des%20up.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
+              <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe src="Rapport%20architecture%20des%20up.pdf" title="Rapport architecture des up" loading="lazy"></iframe>
+              <iframe data-viewpdf title="Rapport architecture des UP" loading="lazy"></iframe>
             </div>
           </div>
         </details>
 
         <!-- Secondary 2 -->
-        <details>
+        <details data-pdf="Mise-en-oeuvre-dsp.pdf">
           <summary>
             <div class="sum-left">
               <div class="sum-title">Mise en œuvre DSP</div>
@@ -490,35 +495,40 @@
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>Rapport disponible via le viewer intégré ci-dessous.</p>
+            <p>
+              <b>Description</b> : étude et mise en œuvre d’un traitement numérique du signal (DSP) avec une démarche structurée (hypothèses, étapes, résultats).
+            </p>
             <div class="proofs">
-              <a class="btn" href="Mise%20en%20%C5%93uvre%20DSP.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
+              <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe src="Mise en œuvre DSP.pdf" title="Mise en œuvre DSP" loading="lazy"></iframe>
+              <iframe data-viewpdf title="Mise en œuvre DSP" loading="lazy"></iframe>
             </div>
           </div>
         </details>
 
         <!-- Secondary 3 -->
-        <details>
+        <details data-pdf="Rapport-servomecanisme.pdf">
           <summary>
             <div class="sum-left">
               <div class="sum-title">Servomécanisme</div>
-              <div class="sum-sub">Analyse / synthèse </div>
+              <div class="sum-sub">Analyse / synthèse</div>
             </div>
             <span class="pill">PDF intégré</span>
           </summary>
           <div class="body">
-            <p>Rapport disponible ci-dessous.</p>
+            <p>
+              <b>Description</b> : étude d’un servomécanisme (dimensionnement, performances attendues, validations/simulations) dans une logique contrôle-commande.
+            </p>
             <div class="proofs">
-              <a class="btn" href="RAPPORT Servomécanisme.pdf" target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
+              <a class="btn" data-openpdf target="_blank" rel="noopener">Ouvrir le rapport (PDF)</a>
             </div>
             <div class="pdf-wrap">
-              <iframe src="RAPPORT%20Servom%C3%A9canisme.pdf" title="RAPPORT Servomécanisme" loading="lazy"></iframe>
+              <iframe data-viewpdf title="Rapport Servomécanisme" loading="lazy"></iframe>
             </div>
           </div>
         </details>
+
       </div>
     </section>
 
@@ -571,7 +581,7 @@
         <div class="inner">
           <div class="meta" style="border-top:0; margin-top:0; padding-top:0">
             <div><b>Téléphone</b> : <a href="tel:+33610259457">+33 6 10 25 94 57</a></div>
-            <div><b>Email</b> : <a href="mailto:bambatoure0702@gmail.com">bambatoure0702@gmail.com</a></div>
+            <div><b>Email</b> : <a href="mailto:bambv0702@gmail.com">bambv0702@gmail.com</a></div>
             <div><b>Liens</b> :
               <a href="https://www.linkedin.com/in/mouhamadou-bamba-toure-180523230/" target="_blank" rel="noopener">LinkedIn</a>
               •
@@ -590,6 +600,15 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Auto: synchronise bouton + iframe à partir de data-pdf (évite les erreurs de lien)
+    document.querySelectorAll("details[data-pdf]").forEach((box) => {
+      const pdf = box.getAttribute("data-pdf");
+      const a = box.querySelector("[data-openpdf]");
+      const frame = box.querySelector("[data-viewpdf]");
+      if (a) a.setAttribute("href", pdf);
+      if (frame) frame.setAttribute("src", pdf);
+    });
   </script>
 
 </body>
